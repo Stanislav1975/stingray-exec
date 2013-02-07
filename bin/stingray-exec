@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+require 'stingray-exec'
+exit Stingray::Exec::Cli.main
