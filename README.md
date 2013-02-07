@@ -1,4 +1,4 @@
-# Stingray::Exec
+# `stingray-exec`
 
 Stingray Traffic Manager Control API Client
 
