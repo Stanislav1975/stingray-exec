@@ -12,4 +12,8 @@ RSpec.configure do |c|
       c.formatter = 'NyanCatFormatter'
     end
   end
+
+  unless ENV['STINGRAY_ENDPOINT']
+    c.filter_run_excluding :integration => true
+  end
 end
