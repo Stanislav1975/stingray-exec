@@ -11,14 +11,18 @@ describe 'stingray-exec', :integration => true do
     it 'should be able to list users' do
       stingray_exec do
         ssl_verify_mode :none
-        users.list_users[:values][:item].should_not be_nil
+        foreach(users.list_users[:values][:item]) do |item|
+          item.should_not be_nil
+        end
       end
     end
 
     it 'should be able to list groups' do
       stingray_exec do
         ssl_verify_mode :none
-        users.list_groups[:values][:item].should_not be_nil
+        foreach(users.list_groups[:values][:item]) do |item|
+          item.should_not be_nil
+        end
       end
     end
   end

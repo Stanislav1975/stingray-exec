@@ -3,9 +3,6 @@
 
 ssl_verify_mode :none
 
-vs_names = virtual_server.get_virtual_server_names[:names][:item]
-
-# The returned "item" could be nil, a string, or an array of strings
-[*(vs_names || [])].each do |n|
+foreach(virtual_server.get_virtual_server_names[:names][:item]) do |n|
   puts n
 end

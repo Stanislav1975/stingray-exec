@@ -3,9 +3,6 @@
 
 ssl_verify_mode :none
 
-pool_names = pool.get_pool_names[:pool_names][:item]
-
-# the returned "item" could be nil, a string, or an array of strings
-[*(pool_names || [])].each do |n|
+foreach(pool.get_pool_names[:pool_names][:item]) do |n|
   puts n
 end

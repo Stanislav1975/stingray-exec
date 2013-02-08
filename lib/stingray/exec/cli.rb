@@ -5,12 +5,13 @@ class Stingray::Exec::Cli
   BANNER = <<-EOB.gsub(/^  /, '')
   Usage: stingray-exec [options] <script>
 
-  Executes scripts in the context of Stingray Traffic Manager
-  configuration models, allowing for access to all methods
-  documented in the Control API.  The <script> argument may be
-  a string expression or a filename.  See the 'examples' directory
-  in the stingray-exec gem tree for some (surprise!) examples of
-  how to do some stuff.
+  Executes scripts in the context of Stingray Traffic Manager configuration
+  models, allowing for access to all methods documented in the Control API.
+  The <script> argument may be a string expression or a filename, and if ommitted
+  will cause stingray-exec to drop into a console.
+
+  See the 'examples' directory in the stingray-exec gem tree for some (surprise!)
+  examples of how to do some stuff.
 
   EOB
 
@@ -22,28 +23,30 @@ class Stingray::Exec::Cli
       end
     end.parse!
 
-    if argv.first
-      script = argv.first
-      if File.exists?(argv.first)
-        script = File.read(argv.first)
-      end
+    script = argv.first || ''
+    if File.exists?(script)
+      script = File.read(script)
+    end
 
-      Stingray::Exec.configure
+    Stingray::Exec.configure
 
-      require_relative 'dsl'
+    require_relative 'dsl'
 
+    unless script.empty?
       Class.new(Object) do
         extend Stingray::Exec::DSL
         stingray_exec do
           eval(script)
         end
       end
-
-      return 0
+    else
+      require 'pry'
+      Pry.config.prompt_name = 'stingray-exec'
+      TOPLEVEL_BINDING.eval('self').extend Stingray::Exec::DSL
+      Pry.start
     end
 
-    $stderr.puts USAGE
-    return 1
+    return 0
   end
 end
 

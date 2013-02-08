@@ -27,4 +27,9 @@ module Stingray::Exec::DSL
     end
     @ssl_verify_mode || :peer
   end
+
+  def foreach(anything, &block)
+    raise SyntaxError.new('Block needed!') unless block_given?
+    [*(anything || [])].each(&block)
+  end
 end
