@@ -1,9 +1,33 @@
 require 'stingray/exec'
 
 class Stingray::Exec::Cli
-  def self.main
-    Stingray::Exec.configure
-    0
+  USAGE = <<-EOU.gsub(/^  /, '')
+  Usage: stingray-exec <script>
+  EOU
+
+  def self.main(argv = ARGV)
+    if argv.first
+      script = argv.first
+      if File.exists?(argv.first)
+        script = File.read(argv.first)
+      end
+
+      Stingray::Exec.configure
+
+      require_relative 'dsl'
+
+      Class.new(Object) do
+        extend Stingray::Exec::DSL
+        stingray_exec do
+          eval(script)
+        end
+      end
+
+      return 0
+    end
+
+    $stderr.puts USAGE
+    return 1
   end
 end
 
