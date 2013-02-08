@@ -16,4 +16,9 @@ RSpec.configure do |c|
   unless ENV['STINGRAY_ENDPOINT']
     c.filter_run_excluding :integration => true
   end
+
+  c.before(:suite) do
+    require 'stingray/exec'
+    Stingray::Exec.configure
+  end
 end
