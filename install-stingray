@@ -5,6 +5,11 @@ if [ ! -d /vagrant ] ; then
   exit 2
 fi
 
+if [ -f /usr/local/zeus/zxtm/bin/zconf ] ; then
+  echo "Looks like stingray is already installed.  Buh-bye."
+  exit 0
+fi
+
 apt-get update
 apt-get install -y vim-nox curl
 
