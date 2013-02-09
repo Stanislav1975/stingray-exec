@@ -26,7 +26,7 @@ class Stingray::ControlApi::Defaults
 
     private
     def ns(cfg)
-      "http://soap.zeus.com/zxtm/1.0/#{cfg}/"
+      "#{File.dirname(generated_actions.fetch(cfg).values.first[:action])}/"
     end
 
     def actions_for(cfg)
