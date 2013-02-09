@@ -28,13 +28,11 @@ describe 'stingray-exec', :integration => true do
   end
 
   context 'when managing pools' do
-    xit 'should be able to add a pool' do
+    it 'should be able to add and delete pools' do
       stingray_exec do
         ssl_verify_mode :none
-        pool.add_pool(
-          'names' => [test_pool_name],
-          'nodes' => [['localhost:9999']]
-        )
+        pool.add_pool(test_pool_name => ['localhost:9999'])
+        pool.delete_pool(test_pool_name)
       end
     end
   end

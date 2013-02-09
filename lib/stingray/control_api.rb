@@ -61,7 +61,8 @@ module Stingray
     end
 
     def self.const_missing(sym)
-      snaked = (CONFIGURATIONS_BY_CONST[sym.to_s] || {})[:snaked]
+      const = sym.to_s
+      snaked = (CONFIGURATIONS_BY_CONST[const] || {})[:snaked]
       unless snaked
         return super
       end
@@ -75,14 +76,30 @@ module Stingray
         _actions = Stingray::ControlApi::Defaults.send(:"#{snaked}_actions")
         actions(*_actions)
         _actions.each do |action|
+          action_str = action.to_s
           define_method(action) do |*args|
-            super(*args).body[:"#{action.to_s}_response"]
+            custom_method = :"_custom_#{action_str}"
+            if respond_to?(custom_method)
+              # use a custom method defined in a *Methods module
+              return send(custom_method, *args).body[:"#{action_str}_response"]
+            else
+              # fall back to the Savon::Model version
+              return super(*args).body[:"#{action.to_s}_response"]
+            end
           end
         end
 
         basic_auth(*Stingray::ControlApi::Defaults.auth)
         endpoint Stingray::ControlApi::Defaults.endpoint_uri
         namespace Stingray::ControlApi::Defaults.send(:"#{snaked}_namespace")
+
+        _methods_file = File.expand_path("../control_api/#{snaked}_methods.rb", __FILE__)
+        if File.exists?(_methods_file)
+          load _methods_file
+          instance_eval do
+            include Stingray::ControlApi.const_get("#{const}Methods")
+          end
+        end
       end)
     end
   end
