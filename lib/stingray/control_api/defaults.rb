@@ -27,6 +27,9 @@ class Stingray::ControlApi::Defaults
     private
     def ns(cfg)
       "#{File.dirname(generated_actions.fetch(cfg).values.first[:action])}/"
+    rescue => e
+      $stderr.puts "#{e.class.name}:#{e.message} -> #{e.backtrace.join("\n")}" if ENV['DEBUG']
+      "http://soap.zeus.com/zxtm/1.0/#{cfg}/"
     end
 
     def actions_for(cfg)
@@ -37,7 +40,8 @@ class Stingray::ControlApi::Defaults
       @generated_actions ||= begin
         actions = {}
 
-        File.open(File.expand_path('../generated-actions.yml', __FILE__)) do |f|
+        ver = ENV['STINGRAY_VERSION'] || '9.1'
+        File.open(File.expand_path("../generated-actions-#{ver}.yml", __FILE__)) do |f|
           actions.merge!(YAML.load(f))
         end
 
