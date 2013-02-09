@@ -12,7 +12,14 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Talks to Riverbed Stingray Traffic Manager over its SOAP Control API}
   gem.homepage      = ""
 
-  gem.files         = `git ls-files`.split($/)
+  gem.files = `git ls-files`.split($/).reject do |f|
+    f =~ %r{^(
+      Vagrantfile|
+      install-stingray|
+      stingray_.*\.txt|
+      \.vagrant\.integration\.env
+    )}x
+  end
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]

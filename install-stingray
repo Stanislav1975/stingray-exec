@@ -1,0 +1,32 @@
+#!/bin/bash
+
+if [ ! -d /vagrant ] ; then
+  echo "This should only be run inside the vagrant VM, nerds."
+  exit 2
+fi
+
+apt-get update
+apt-get install -y vim-nox curl
+
+set -e
+set -x
+
+pushd /tmp
+tar xzvf /vagrant/ZeusTM_91_Linux-x86_64.tgz
+pushd ZeusTM_91_Linux-x86_64
+./zinstall \
+  --noninteractive \
+  --replay-from=/vagrant/stingray_install.txt \
+  --quiet >./install.stdout 2>./install.stderr
+/usr/local/zeus/zxtm/configure \
+  --noninteractive \
+  --replay-from=/vagrant/stingray_configure.txt \
+  --quiet >./configure.stdout 2>./configure.stderr
+
+set +x
+echo
+echo "--------------------------------------------------"
+echo "---- Stingray install all done.  Don't panic. ----"
+echo "--------------------------------------------------"
+echo
+exit 0

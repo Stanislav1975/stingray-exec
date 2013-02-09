@@ -1,0 +1,8 @@
+accept-license=accept
+admin!password=admin
+start_at_boot=Y
+zxtm!cluster=C
+zxtm!group=nogroup
+zxtm!license_key=
+zxtm!unique_bind=N
+zxtm!user=nobody
