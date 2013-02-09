@@ -69,29 +69,40 @@ module Stingray
 
       require 'savon'
       require 'stingray/control_api/defaults'
+      require 'stingray/control_api/actions'
 
       const_set(sym, Class.new(Object) do
         extend Savon::Model
 
-        _actions = Stingray::ControlApi::Defaults.send(:"#{snaked}_actions")
-        actions(*_actions)
-        _actions.each do |action|
+        class << self
+          attr_accessor :_action_map
+        end
+        self._action_map = Stingray::ControlApi::Actions.send(:"#{snaked}_action_map")
+
+        actions(*_action_map.keys.map(&:to_sym))
+        _action_map.keys.each do |action|
           action_str = action.to_s
+          response_key = :"#{action_str}_response"
           define_method(action) do |*args|
-            custom_method = :"_custom_#{action_str}"
-            if respond_to?(custom_method)
-              # use a custom method defined in a *Methods module
-              return send(custom_method, *args).body[:"#{action_str}_response"]
-            else
-              # fall back to the Savon::Model version
-              return super(*args).body[:"#{action.to_s}_response"]
+            begin
+              custom_method = :"_custom_#{action_str}"
+              if respond_to?(custom_method)
+                # use a custom method defined in a *Methods module
+                return send(custom_method, *args).body[response_key]
+              else
+                # fall back to the Savon::Model version
+                return super(*args).body[response_key]
+              end
+            rescue => e
+              $stderr.puts "#{e.class.name}:#{e.message} -> #{e.backtrace.join("\n")}" if ENV['DEBUG']
+              self.client.request(const, self.class._action_map[action], *args).body[response_key]
             end
           end
         end
 
         basic_auth(*Stingray::ControlApi::Defaults.auth)
         endpoint Stingray::ControlApi::Defaults.endpoint_uri
-        namespace Stingray::ControlApi::Defaults.send(:"#{snaked}_namespace")
+        namespace Stingray::ControlApi::Actions.send(:"#{snaked}_namespace")
 
         _methods_file = File.expand_path("../control_api/#{snaked}_methods.rb", __FILE__)
         if File.exists?(_methods_file)
