@@ -37,8 +37,8 @@ class Stingray::ControlApi::Defaults
       @generated_actions ||= begin
         actions = {}
 
-        File.open(File.expand_path('../generated-actions.json', __FILE__)) do |f|
-          actions.merge!(JSON.load(f))
+        File.open(File.expand_path('../generated-actions.yml', __FILE__)) do |f|
+          actions.merge!(YAML.load(f))
         end
 
         actions

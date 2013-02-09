@@ -1,12 +1,11 @@
 #!/usr/bin/env ruby
 
 require 'wasabi'
-require 'json'
 
 USAGE = <<-EOU
 Usage: #{File.basename($0)} <stingray-wsdl-dir>
 
-Generate a JSON blob containing all methods found in the WSDL files provided in
+Generate a YAML blob containing all methods found in the WSDL files provided in
 the built-in Stingray docs.  This is done so that we can use Savon::Model to
 build classes with predefined actions without having to distribute the WSDL
 files ourselves, which would be uncool and probably illegal.
@@ -94,7 +93,7 @@ class ActionsGenerator
       actions[cfg] = generate_actions_for_config(cfg)
     end
 
-    JSON.pretty_generate(actions)
+    YAML.dump(actions)
   end
 
   def generate_actions_for_config(cfg)
