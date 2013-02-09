@@ -3,6 +3,7 @@ require 'bundler/setup'
 
 require 'rbconfig'
 require 'simplecov'
+require 'pry'
 
 RSpec.configure do |c|
   if !ENV['TRAVIS']
@@ -20,5 +21,6 @@ RSpec.configure do |c|
   c.before(:suite) do
     require 'stingray/exec'
     Stingray::Exec.configure
+    ENV['STINGRAY_SSL_VERIFY_NONE'] = '1'
   end
 end

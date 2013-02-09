@@ -1,61 +1,29 @@
 require 'stingray/control_api'
+require 'stingray/control_api/soap_helper_methods'
 
 module Stingray::ControlApi::PoolMethods
-  # Adds pools with nodes.  The `pool_configs` argument should be a hash of
-  # pool name => node list mappings
+  include Stingray::ControlApi::SoapHelperMethods
+
   def _custom_add_pool(pool_configs)
-    body = {
-      :names => {},
-      :nodes => {
-        :attributes! => {},
-      },
-      :attributes! => {
-        :names => {'soapenc:arrayType' => "xsd:string[#{pool_configs.length}]"},
-        :nodes => {'soapenc:arrayType' => "xsd:list[#{pool_configs.length}]"},
-      },
-    }
-
-    i = 0
-    pool_configs.each do |name,nodes|
-      body[:names][:"name#{i}"] = name
-
-      name_nodes = {:attributes! => {}}
-      nodes.each_with_index do |node,j|
-        name_nodes[:"node#{j}"] = node
-      end
-
-      body[:nodes][:attributes!][:"name#{i}"] = {
-        'soapenc:arrayType' => "xsd:string[#{nodes.length}]"
-      }
-
-      body[:nodes][:"name#{i}"] = name_nodes
-      i += 1
-    end
-
-    self.client.request('Pool', :add_pool) do
-      soap.namespaces['xmlns:soapenc'] = 'http://schemas.xmlsoap.org/soap/encoding/'
-      soap.body = body
-    end
+    body = _build_many_keyed_string_arrays(pool_configs, :names, :nodes)
+    _make_soap_request('Pool', :add_pool, body)
   end
 
-  # Deletes pools with names given in `names`, each of which should be a string.
   def _custom_delete_pool(*names)
-    raise ArgumentError.new('No names given!') if names.empty?
+    _make_names_soap_request(names, 'Pool', :delete_pool)
+  end
 
-    body = {
-      :names => {},
-      :attributes! => {
-        :names => {'soapenc:arrayType' => "xsd:string[#{names.length}]"}
-      }
-    }
+  def _custom_get_nodes(*names)
+    _make_names_soap_request(names, 'Pool', :get_nodes)
+  end
 
-    names.each_with_index do |name,i|
-      body[:names][:"name#{i}"] = name
-    end
+  def _custom_set_monitors(monitor_configs)
+    _make_names_values_soap_request(monitor_configs, 'Pool', :set_monitors)
+  end
 
-    self.client.request('Pool', :delete_pool) do
-      soap.namespaces['xmlns:soapenc'] = 'http://schemas.xmlsoap.org/soap/encoding/'
-      soap.body = body
+  %w(add add_draining remove remove_draining enable disable).each do |node_op|
+    define_method(:"_custom_#{node_op}_nodes") do |node_configs|
+      _make_names_values_soap_request(node_configs, 'Pool', :"#{node_op}_nodes")
     end
   end
 end

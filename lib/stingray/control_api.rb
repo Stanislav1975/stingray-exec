@@ -84,18 +84,13 @@ module Stingray
           action_str = action.to_s
           response_key = :"#{action_str}_response"
           define_method(action) do |*args|
-            begin
-              custom_method = :"_custom_#{action_str}"
-              if respond_to?(custom_method)
-                # use a custom method defined in a *Methods module
-                return send(custom_method, *args).body[response_key]
-              else
-                # fall back to the Savon::Model version
-                return super(*args).body[response_key]
-              end
-            rescue => e
-              $stderr.puts "#{e.class.name}:#{e.message} -> #{e.backtrace.join("\n")}" if ENV['DEBUG']
-              self.client.request(const, self.class._action_map[action], *args).body[response_key]
+            custom_method = :"_custom_#{action_str}"
+            if respond_to?(custom_method)
+              # use a custom method defined in a *Methods module
+              return send(custom_method, *args).body[response_key]
+            else
+              # fall back to the Savon::Model version
+              return super(*args).body[response_key]
             end
           end
         end
