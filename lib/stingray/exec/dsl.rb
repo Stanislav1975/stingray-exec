@@ -29,7 +29,7 @@ module Stingray::Exec::DSL
     unless mode.nil?
       @ssl_verify_mode = mode
     end
-    @ssl_verify_mode || :peer
+    @ssl_verify_mode || ENV['STINGRAY_SSL_VERIFY_NONE'] ? :none : :peer
   end
 
   def foreach(anything, &block)

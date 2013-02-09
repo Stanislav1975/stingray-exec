@@ -21,7 +21,11 @@ class Stingray::Exec::Cli
       opts.on('-v', '--verbose', 'Yelling.') do |v|
         ENV['DEBUG'] = '1'
       end
-    end.parse!
+      opts.on('-k', '--insecure',
+          'Allow "insecure" SSL connections, setting verification mode to :none') do |k|
+        ENV['STINGRAY_SSL_VERIFY_NONE'] = '1'
+      end
+    end.parse!(argv)
 
     script = argv.first || ''
     filename = ''
