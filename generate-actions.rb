@@ -99,7 +99,12 @@ class ActionsGenerator
 
   def generate_actions_for_config(cfg)
     doc = Wasabi.document(File.read("#{@wsdl_root}/#{cfg}.wsdl"))
-    doc.operations.merge({})
+    sorted_ops = {}
+    ops = doc.operations
+    ops.keys.sort.each do |k|
+      sorted_ops[k] = ops[k]
+    end
+    sorted_ops
   rescue => e
     $stderr.puts "ERROR: getting operations for #{cfg}: #{e.class.name} #{e.message}"
     $stderr.puts e.backtrace.join("\n") if ENV['DEBUG']

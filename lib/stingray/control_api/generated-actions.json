@@ -154,16 +154,6 @@
       "input": "getEmailRecipientsByLocation",
       "namespace_identifier": "zeusns"
     },
-    "get_email_smtp_server": {
-      "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/getEmailSMTPServer",
-      "input": "getEmailSMTPServer",
-      "namespace_identifier": "zeusns"
-    },
-    "get_email_smtp_server_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/getEmailSMTPServerByLocation",
-      "input": "getEmailSMTPServerByLocation",
-      "namespace_identifier": "zeusns"
-    },
     "get_email_sender": {
       "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/getEmailSender",
       "input": "getEmailSender",
@@ -174,6 +164,16 @@
       "input": "getEmailSenderByLocation",
       "namespace_identifier": "zeusns"
     },
+    "get_email_smtp_server": {
+      "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/getEmailSMTPServer",
+      "input": "getEmailSMTPServer",
+      "namespace_identifier": "zeusns"
+    },
+    "get_email_smtp_server_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/getEmailSMTPServerByLocation",
+      "input": "getEmailSMTPServerByLocation",
+      "namespace_identifier": "zeusns"
+    },
     "get_log_file_path": {
       "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/getLogFilePath",
       "input": "getLogFilePath",
@@ -182,6 +182,16 @@
     "get_log_file_path_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/getLogFilePathByLocation",
       "input": "getLogFilePathByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "get_script_arguments": {
+      "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/getScriptArguments",
+      "input": "getScriptArguments",
+      "namespace_identifier": "zeusns"
+    },
+    "get_script_program": {
+      "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/getScriptProgram",
+      "input": "getScriptProgram",
       "namespace_identifier": "zeusns"
     },
     "get_snmp_hash_alg": {
@@ -244,16 +254,6 @@
       "input": "getSOAPProxyByLocation",
       "namespace_identifier": "zeusns"
     },
-    "get_script_arguments": {
-      "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/getScriptArguments",
-      "input": "getScriptArguments",
-      "namespace_identifier": "zeusns"
-    },
-    "get_script_program": {
-      "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/getScriptProgram",
-      "input": "getScriptProgram",
-      "namespace_identifier": "zeusns"
-    },
     "get_syslog_host": {
       "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/getSyslogHost",
       "input": "getSyslogHost",
@@ -304,6 +304,11 @@
       "input": "getVerboseByLocation",
       "namespace_identifier": "zeusns"
     },
+    "remove_script_arguments": {
+      "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/removeScriptArguments",
+      "input": "removeScriptArguments",
+      "namespace_identifier": "zeusns"
+    },
     "remove_soap_authentication": {
       "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/removeSOAPAuthentication",
       "input": "removeSOAPAuthentication",
@@ -312,11 +317,6 @@
     "remove_soap_authentication_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/removeSOAPAuthenticationByLocation",
       "input": "removeSOAPAuthenticationByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "remove_script_arguments": {
-      "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/removeScriptArguments",
-      "input": "removeScriptArguments",
       "namespace_identifier": "zeusns"
     },
     "rename_action": {
@@ -334,16 +334,6 @@
       "input": "setEmailRecipientsByLocation",
       "namespace_identifier": "zeusns"
     },
-    "set_email_smtp_server": {
-      "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/setEmailSMTPServer",
-      "input": "setEmailSMTPServer",
-      "namespace_identifier": "zeusns"
-    },
-    "set_email_smtp_server_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/setEmailSMTPServerByLocation",
-      "input": "setEmailSMTPServerByLocation",
-      "namespace_identifier": "zeusns"
-    },
     "set_email_sender": {
       "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/setEmailSender",
       "input": "setEmailSender",
@@ -354,6 +344,16 @@
       "input": "setEmailSenderByLocation",
       "namespace_identifier": "zeusns"
     },
+    "set_email_smtp_server": {
+      "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/setEmailSMTPServer",
+      "input": "setEmailSMTPServer",
+      "namespace_identifier": "zeusns"
+    },
+    "set_email_smtp_server_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/setEmailSMTPServerByLocation",
+      "input": "setEmailSMTPServerByLocation",
+      "namespace_identifier": "zeusns"
+    },
     "set_log_file_path": {
       "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/setLogFilePath",
       "input": "setLogFilePath",
@@ -362,6 +362,11 @@
     "set_log_file_path_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/setLogFilePathByLocation",
       "input": "setLogFilePathByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "set_script_program": {
+      "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/setScriptProgram",
+      "input": "setScriptProgram",
       "namespace_identifier": "zeusns"
     },
     "set_snmp_auth_password": {
@@ -442,11 +447,6 @@
     "set_soap_proxy_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/setSOAPProxyByLocation",
       "input": "setSOAPProxyByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "set_script_program": {
-      "action": "http://soap.zeus.com/zxtm/1.0/Alerting/Action/setScriptProgram",
-      "input": "setScriptProgram",
       "namespace_identifier": "zeusns"
     },
     "set_syslog_host": {
@@ -995,6 +995,16 @@
       "input": "getLDAPFilterByLocation",
       "namespace_identifier": "zeusns"
     },
+    "get_ldap_search_attr": {
+      "action": "http://soap.zeus.com/zxtm/1.0/Catalog/Authenticators/getLDAPSearchAttr",
+      "input": "getLDAPSearchAttr",
+      "namespace_identifier": "zeusns"
+    },
+    "get_ldap_search_attr_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/Catalog/Authenticators/getLDAPSearchAttrByLocation",
+      "input": "getLDAPSearchAttrByLocation",
+      "namespace_identifier": "zeusns"
+    },
     "get_ldapssl_certificate": {
       "action": "http://soap.zeus.com/zxtm/1.0/Catalog/Authenticators/getLDAPSSLCertificate",
       "input": "getLDAPSSLCertificate",
@@ -1023,16 +1033,6 @@
     "get_ldapssl_type_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/Catalog/Authenticators/getLDAPSSLTypeByLocation",
       "input": "getLDAPSSLTypeByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "get_ldap_search_attr": {
-      "action": "http://soap.zeus.com/zxtm/1.0/Catalog/Authenticators/getLDAPSearchAttr",
-      "input": "getLDAPSearchAttr",
-      "namespace_identifier": "zeusns"
-    },
-    "get_ldap_search_attr_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/Catalog/Authenticators/getLDAPSearchAttrByLocation",
-      "input": "getLDAPSearchAttrByLocation",
       "namespace_identifier": "zeusns"
     },
     "get_note": {
@@ -1115,6 +1115,16 @@
       "input": "setLDAPFilterByLocation",
       "namespace_identifier": "zeusns"
     },
+    "set_ldap_search_attr": {
+      "action": "http://soap.zeus.com/zxtm/1.0/Catalog/Authenticators/setLDAPSearchAttr",
+      "input": "setLDAPSearchAttr",
+      "namespace_identifier": "zeusns"
+    },
+    "set_ldap_search_attr_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/Catalog/Authenticators/setLDAPSearchAttrByLocation",
+      "input": "setLDAPSearchAttrByLocation",
+      "namespace_identifier": "zeusns"
+    },
     "set_ldapssl_certificate": {
       "action": "http://soap.zeus.com/zxtm/1.0/Catalog/Authenticators/setLDAPSSLCertificate",
       "input": "setLDAPSSLCertificate",
@@ -1143,16 +1153,6 @@
     "set_ldapssl_type_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/Catalog/Authenticators/setLDAPSSLTypeByLocation",
       "input": "setLDAPSSLTypeByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "set_ldap_search_attr": {
-      "action": "http://soap.zeus.com/zxtm/1.0/Catalog/Authenticators/setLDAPSearchAttr",
-      "input": "setLDAPSearchAttr",
-      "namespace_identifier": "zeusns"
-    },
-    "set_ldap_search_attr_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/Catalog/Authenticators/setLDAPSearchAttrByLocation",
-      "input": "setLDAPSearchAttrByLocation",
       "namespace_identifier": "zeusns"
     },
     "set_note": {
@@ -2646,11 +2646,6 @@
       "input": "getResponseTimeByLocation",
       "namespace_identifier": "zeusns"
     },
-    "get_slm_names": {
-      "action": "http://soap.zeus.com/zxtm/1.0/Catalog/SLM/getSLMNames",
-      "input": "getSLMNames",
-      "namespace_identifier": "zeusns"
-    },
     "get_serious_threshold": {
       "action": "http://soap.zeus.com/zxtm/1.0/Catalog/SLM/getSeriousThreshold",
       "input": "getSeriousThreshold",
@@ -2659,6 +2654,11 @@
     "get_serious_threshold_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/Catalog/SLM/getSeriousThresholdByLocation",
       "input": "getSeriousThresholdByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "get_slm_names": {
+      "action": "http://soap.zeus.com/zxtm/1.0/Catalog/SLM/getSLMNames",
+      "input": "getSLMNames",
       "namespace_identifier": "zeusns"
     },
     "get_warning_threshold": {
@@ -2733,14 +2733,14 @@
       "input": "getRawCertificate",
       "namespace_identifier": "zeusns"
     },
-    "import_crl": {
-      "action": "http://soap.zeus.com/zxtm/1.0/Catalog/SSL/CertificateAuthorities/importCRL",
-      "input": "importCRL",
-      "namespace_identifier": "zeusns"
-    },
     "import_certificate_authority": {
       "action": "http://soap.zeus.com/zxtm/1.0/Catalog/SSL/CertificateAuthorities/importCertificateAuthority",
       "input": "importCertificateAuthority",
+      "namespace_identifier": "zeusns"
+    },
+    "import_crl": {
+      "action": "http://soap.zeus.com/zxtm/1.0/Catalog/SSL/CertificateAuthorities/importCRL",
+      "input": "importCRL",
       "namespace_identifier": "zeusns"
     },
     "rename_certificate_authority": {
@@ -3034,14 +3034,14 @@
       "input": "getEnabled",
       "namespace_identifier": "zeusns"
     },
-    "get_glb_service_names": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GLB/Service/getGLBServiceNames",
-      "input": "getGLBServiceNames",
-      "namespace_identifier": "zeusns"
-    },
     "get_geo_effect": {
       "action": "http://soap.zeus.com/zxtm/1.0/GLB/Service/getGeoEffect",
       "input": "getGeoEffect",
+      "namespace_identifier": "zeusns"
+    },
+    "get_glb_service_names": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GLB/Service/getGLBServiceNames",
+      "input": "getGLBServiceNames",
       "namespace_identifier": "zeusns"
     },
     "get_load": {
@@ -3296,16 +3296,6 @@
       "input": "addFlipperFrontendCheckAddressesByLocation",
       "namespace_identifier": "zeusns"
     },
-    "get_asp_session_cache_size": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getASPSessionCacheSize",
-      "input": "getASPSessionCacheSize",
-      "namespace_identifier": "zeusns"
-    },
-    "get_asp_session_cache_size_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getASPSessionCacheSizeByLocation",
-      "input": "getASPSessionCacheSizeByLocation",
-      "namespace_identifier": "zeusns"
-    },
     "get_accepting_delay": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getAcceptingDelay",
       "input": "getAcceptingDelay",
@@ -3329,11 +3319,6 @@
     "get_admin_ssl_ciphers": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getAdminSSLCiphers",
       "input": "getAdminSSLCiphers",
-      "namespace_identifier": "zeusns"
-    },
-    "get_admin_ssl_max_handshake_message_size": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getAdminSSLMaxHandshakeMessageSize",
-      "input": "getAdminSSLMaxHandshakeMessageSize",
       "namespace_identifier": "zeusns"
     },
     "get_admin_ssl_support_tls11": {
@@ -3379,6 +3364,16 @@
     "get_allow_consecutive_chars": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getAllowConsecutiveChars",
       "input": "getAllowConsecutiveChars",
+      "namespace_identifier": "zeusns"
+    },
+    "get_asp_session_cache_size": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getASPSessionCacheSize",
+      "input": "getASPSessionCacheSize",
+      "namespace_identifier": "zeusns"
+    },
+    "get_asp_session_cache_size_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getASPSessionCacheSizeByLocation",
+      "input": "getASPSessionCacheSizeByLocation",
       "namespace_identifier": "zeusns"
     },
     "get_autoscaler_verbose": {
@@ -3446,6 +3441,11 @@
       "input": "getControlCanUpdateDefault",
       "namespace_identifier": "zeusns"
     },
+    "get_dead_time": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getDeadTime",
+      "input": "getDeadTime",
+      "namespace_identifier": "zeusns"
+    },
     "get_dns_cache_expiry_time": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getDNSCacheExpiryTime",
       "input": "getDNSCacheExpiryTime",
@@ -3486,11 +3486,6 @@
       "input": "getDNSTimeoutByLocation",
       "namespace_identifier": "zeusns"
     },
-    "get_dead_time": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getDeadTime",
-      "input": "getDeadTime",
-      "namespace_identifier": "zeusns"
-    },
     "get_ec2_access_key_id": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getEC2AccessKeyID",
       "input": "getEC2AccessKeyID",
@@ -3519,16 +3514,6 @@
     "get_error_log_file_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getErrorLogFileByLocation",
       "input": "getErrorLogFileByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "get_ftp_data_bind_low": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getFTPDataBindLow",
-      "input": "getFTPDataBindLow",
-      "namespace_identifier": "zeusns"
-    },
-    "get_ftp_data_bind_low_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getFTPDataBindLowByLocation",
-      "input": "getFTPDataBindLowByLocation",
       "namespace_identifier": "zeusns"
     },
     "get_flipper_arp_count": {
@@ -3631,6 +3616,16 @@
       "input": "getFlipperVerboseByLocation",
       "namespace_identifier": "zeusns"
     },
+    "get_ftp_data_bind_low": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getFTPDataBindLow",
+      "input": "getFTPDataBindLow",
+      "namespace_identifier": "zeusns"
+    },
+    "get_ftp_data_bind_low_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getFTPDataBindLowByLocation",
+      "input": "getFTPDataBindLowByLocation",
+      "namespace_identifier": "zeusns"
+    },
     "get_glb_load_change_limit": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getGLBLoadChangeLimit",
       "input": "getGLBLoadChangeLimit",
@@ -3661,16 +3656,6 @@
       "input": "getHistoricalTrafficDaysByLocation",
       "namespace_identifier": "zeusns"
     },
-    "get_ip_session_cache_size": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getIPSessionCacheSize",
-      "input": "getIPSessionCacheSize",
-      "namespace_identifier": "zeusns"
-    },
-    "get_ip_session_cache_size_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getIPSessionCacheSizeByLocation",
-      "input": "getIPSessionCacheSizeByLocation",
-      "namespace_identifier": "zeusns"
-    },
     "get_idle_connection_timeout": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getIdleConnectionTimeout",
       "input": "getIdleConnectionTimeout",
@@ -3679,6 +3664,16 @@
     "get_idle_connection_timeout_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getIdleConnectionTimeoutByLocation",
       "input": "getIdleConnectionTimeoutByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "get_ip_session_cache_size": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getIPSessionCacheSize",
+      "input": "getIPSessionCacheSize",
+      "namespace_identifier": "zeusns"
+    },
+    "get_ip_session_cache_size_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getIPSessionCacheSizeByLocation",
+      "input": "getIPSessionCacheSizeByLocation",
       "namespace_identifier": "zeusns"
     },
     "get_j2_ee_session_cache_size": {
@@ -3991,6 +3986,16 @@
       "input": "getRecentConnsSnapshotSizeByLocation",
       "namespace_identifier": "zeusns"
     },
+    "get_shared_pool_size": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSharedPoolSize",
+      "input": "getSharedPoolSize",
+      "namespace_identifier": "zeusns"
+    },
+    "get_shared_pool_size_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSharedPoolSizeByLocation",
+      "input": "getSharedPoolSizeByLocation",
+      "namespace_identifier": "zeusns"
+    },
     "get_slm_class_limit": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSLMClassLimit",
       "input": "getSLMClassLimit",
@@ -4009,6 +4014,26 @@
     "get_snmp_user_counters_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSNMPUserCountersByLocation",
       "input": "getSNMPUserCountersByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "get_soap_idle_minutes": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSoapIdleMinutes",
+      "input": "getSoapIdleMinutes",
+      "namespace_identifier": "zeusns"
+    },
+    "get_soap_idle_minutes_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSoapIdleMinutesByLocation",
+      "input": "getSoapIdleMinutesByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "get_socket_optimizations": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSocketOptimizations",
+      "input": "getSocketOptimizations",
+      "namespace_identifier": "zeusns"
+    },
+    "get_socket_optimizations_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSocketOptimizationsByLocation",
+      "input": "getSocketOptimizationsByLocation",
       "namespace_identifier": "zeusns"
     },
     "get_ssl3_allow_rehandshake": {
@@ -4039,36 +4064,6 @@
     "get_ssl3_diffie_hellman_key_length_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSSL3DiffieHellmanKeyLengthByLocation",
       "input": "getSSL3DiffieHellmanKeyLengthByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "get_sslcrl_mem_size": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSSLCRLMemSize",
-      "input": "getSSLCRLMemSize",
-      "namespace_identifier": "zeusns"
-    },
-    "get_sslcrl_mem_size_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSSLCRLMemSizeByLocation",
-      "input": "getSSLCRLMemSizeByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "get_ssld_failure_count": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSSLDFailureCount",
-      "input": "getSSLDFailureCount",
-      "namespace_identifier": "zeusns"
-    },
-    "get_ssld_failure_count_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSSLDFailureCountByLocation",
-      "input": "getSSLDFailureCountByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "get_ssldpkcs11_lib": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSSLDPKCS11Lib",
-      "input": "getSSLDPKCS11Lib",
-      "namespace_identifier": "zeusns"
-    },
-    "get_ssldpkcs11_lib_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSSLDPKCS11LibByLocation",
-      "input": "getSSLDPKCS11LibByLocation",
       "namespace_identifier": "zeusns"
     },
     "get_ssl_hardware_accelerator": {
@@ -4129,11 +4124,6 @@
     "get_ssl_hardware_type_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSSLHardwareTypeByLocation",
       "input": "getSSLHardwareTypeByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "get_ssl_max_handshake_message_size": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSSLMaxHandshakeMessageSize",
-      "input": "getSSLMaxHandshakeMessageSize",
       "namespace_identifier": "zeusns"
     },
     "get_ssl_session_cache_size": {
@@ -4206,36 +4196,6 @@
       "input": "getSSLSupportTLS1ByLocation",
       "namespace_identifier": "zeusns"
     },
-    "get_shared_pool_size": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSharedPoolSize",
-      "input": "getSharedPoolSize",
-      "namespace_identifier": "zeusns"
-    },
-    "get_shared_pool_size_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSharedPoolSizeByLocation",
-      "input": "getSharedPoolSizeByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "get_soap_idle_minutes": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSoapIdleMinutes",
-      "input": "getSoapIdleMinutes",
-      "namespace_identifier": "zeusns"
-    },
-    "get_soap_idle_minutes_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSoapIdleMinutesByLocation",
-      "input": "getSoapIdleMinutesByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "get_socket_optimizations": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSocketOptimizations",
-      "input": "getSocketOptimizations",
-      "namespace_identifier": "zeusns"
-    },
-    "get_socket_optimizations_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSocketOptimizationsByLocation",
-      "input": "getSocketOptimizationsByLocation",
-      "namespace_identifier": "zeusns"
-    },
     "get_ssld_accel": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSsldAccel",
       "input": "getSsldAccel",
@@ -4246,6 +4206,16 @@
       "input": "getSsldAccelByLocation",
       "namespace_identifier": "zeusns"
     },
+    "get_ssld_failure_count": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSSLDFailureCount",
+      "input": "getSSLDFailureCount",
+      "namespace_identifier": "zeusns"
+    },
+    "get_ssld_failure_count_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSSLDFailureCountByLocation",
+      "input": "getSSLDFailureCountByLocation",
+      "namespace_identifier": "zeusns"
+    },
     "get_ssld_library": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSsldLibrary",
       "input": "getSsldLibrary",
@@ -4254,6 +4224,16 @@
     "get_ssld_library_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSsldLibraryByLocation",
       "input": "getSsldLibraryByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "get_ssldpkcs11_lib": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSSLDPKCS11Lib",
+      "input": "getSSLDPKCS11Lib",
+      "namespace_identifier": "zeusns"
+    },
+    "get_ssldpkcs11_lib_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/getSSLDPKCS11LibByLocation",
+      "input": "getSSLDPKCS11LibByLocation",
       "namespace_identifier": "zeusns"
     },
     "get_state_sync_time": {
@@ -4486,16 +4466,6 @@
       "input": "removeFlipperFrontendCheckAddressesByLocation",
       "namespace_identifier": "zeusns"
     },
-    "set_asp_session_cache_size": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setASPSessionCacheSize",
-      "input": "setASPSessionCacheSize",
-      "namespace_identifier": "zeusns"
-    },
-    "set_asp_session_cache_size_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setASPSessionCacheSizeByLocation",
-      "input": "setASPSessionCacheSizeByLocation",
-      "namespace_identifier": "zeusns"
-    },
     "set_accepting_delay": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setAcceptingDelay",
       "input": "setAcceptingDelay",
@@ -4519,11 +4489,6 @@
     "set_admin_ssl_ciphers": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setAdminSSLCiphers",
       "input": "setAdminSSLCiphers",
-      "namespace_identifier": "zeusns"
-    },
-    "set_admin_ssl_max_handshake_message_size": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setAdminSSLMaxHandshakeMessageSize",
-      "input": "setAdminSSLMaxHandshakeMessageSize",
       "namespace_identifier": "zeusns"
     },
     "set_admin_ssl_support_tls11": {
@@ -4569,6 +4534,16 @@
     "set_allow_consecutive_chars": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setAllowConsecutiveChars",
       "input": "setAllowConsecutiveChars",
+      "namespace_identifier": "zeusns"
+    },
+    "set_asp_session_cache_size": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setASPSessionCacheSize",
+      "input": "setASPSessionCacheSize",
+      "namespace_identifier": "zeusns"
+    },
+    "set_asp_session_cache_size_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setASPSessionCacheSizeByLocation",
+      "input": "setASPSessionCacheSizeByLocation",
       "namespace_identifier": "zeusns"
     },
     "set_autoscaler_verbose": {
@@ -4641,6 +4616,11 @@
       "input": "setControlCanUpdateDefault",
       "namespace_identifier": "zeusns"
     },
+    "set_dead_time": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setDeadTime",
+      "input": "setDeadTime",
+      "namespace_identifier": "zeusns"
+    },
     "set_dns_cache_expiry_time": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setDNSCacheExpiryTime",
       "input": "setDNSCacheExpiryTime",
@@ -4681,11 +4661,6 @@
       "input": "setDNSTimeoutByLocation",
       "namespace_identifier": "zeusns"
     },
-    "set_dead_time": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setDeadTime",
-      "input": "setDeadTime",
-      "namespace_identifier": "zeusns"
-    },
     "set_ec2_access_key_id": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setEC2AccessKeyID",
       "input": "setEC2AccessKeyID",
@@ -4724,16 +4699,6 @@
     "set_error_log_file_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setErrorLogFileByLocation",
       "input": "setErrorLogFileByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "set_ftp_data_bind_low": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setFTPDataBindLow",
-      "input": "setFTPDataBindLow",
-      "namespace_identifier": "zeusns"
-    },
-    "set_ftp_data_bind_low_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setFTPDataBindLowByLocation",
-      "input": "setFTPDataBindLowByLocation",
       "namespace_identifier": "zeusns"
     },
     "set_flipper_arp_count": {
@@ -4836,6 +4801,16 @@
       "input": "setFlipperVerboseByLocation",
       "namespace_identifier": "zeusns"
     },
+    "set_ftp_data_bind_low": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setFTPDataBindLow",
+      "input": "setFTPDataBindLow",
+      "namespace_identifier": "zeusns"
+    },
+    "set_ftp_data_bind_low_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setFTPDataBindLowByLocation",
+      "input": "setFTPDataBindLowByLocation",
+      "namespace_identifier": "zeusns"
+    },
     "set_glb_load_change_limit": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setGLBLoadChangeLimit",
       "input": "setGLBLoadChangeLimit",
@@ -4866,16 +4841,6 @@
       "input": "setHistoricalTrafficDaysByLocation",
       "namespace_identifier": "zeusns"
     },
-    "set_ip_session_cache_size": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setIPSessionCacheSize",
-      "input": "setIPSessionCacheSize",
-      "namespace_identifier": "zeusns"
-    },
-    "set_ip_session_cache_size_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setIPSessionCacheSizeByLocation",
-      "input": "setIPSessionCacheSizeByLocation",
-      "namespace_identifier": "zeusns"
-    },
     "set_idle_connection_timeout": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setIdleConnectionTimeout",
       "input": "setIdleConnectionTimeout",
@@ -4884,6 +4849,16 @@
     "set_idle_connection_timeout_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setIdleConnectionTimeoutByLocation",
       "input": "setIdleConnectionTimeoutByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "set_ip_session_cache_size": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setIPSessionCacheSize",
+      "input": "setIPSessionCacheSize",
+      "namespace_identifier": "zeusns"
+    },
+    "set_ip_session_cache_size_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setIPSessionCacheSizeByLocation",
+      "input": "setIPSessionCacheSizeByLocation",
       "namespace_identifier": "zeusns"
     },
     "set_j2_ee_session_cache_size": {
@@ -5196,6 +5171,16 @@
       "input": "setRecentConnsSnapshotSizeByLocation",
       "namespace_identifier": "zeusns"
     },
+    "set_shared_pool_size": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSharedPoolSize",
+      "input": "setSharedPoolSize",
+      "namespace_identifier": "zeusns"
+    },
+    "set_shared_pool_size_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSharedPoolSizeByLocation",
+      "input": "setSharedPoolSizeByLocation",
+      "namespace_identifier": "zeusns"
+    },
     "set_slm_class_limit": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSLMClassLimit",
       "input": "setSLMClassLimit",
@@ -5214,6 +5199,26 @@
     "set_snmp_user_counters_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSNMPUserCountersByLocation",
       "input": "setSNMPUserCountersByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "set_soap_idle_minutes": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSoapIdleMinutes",
+      "input": "setSoapIdleMinutes",
+      "namespace_identifier": "zeusns"
+    },
+    "set_soap_idle_minutes_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSoapIdleMinutesByLocation",
+      "input": "setSoapIdleMinutesByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "set_socket_optimizations": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSocketOptimizations",
+      "input": "setSocketOptimizations",
+      "namespace_identifier": "zeusns"
+    },
+    "set_socket_optimizations_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSocketOptimizationsByLocation",
+      "input": "setSocketOptimizationsByLocation",
       "namespace_identifier": "zeusns"
     },
     "set_ssl3_allow_rehandshake": {
@@ -5244,46 +5249,6 @@
     "set_ssl3_diffie_hellman_key_length_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSSL3DiffieHellmanKeyLengthByLocation",
       "input": "setSSL3DiffieHellmanKeyLengthByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "set_sslcrl_mem_size": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSSLCRLMemSize",
-      "input": "setSSLCRLMemSize",
-      "namespace_identifier": "zeusns"
-    },
-    "set_sslcrl_mem_size_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSSLCRLMemSizeByLocation",
-      "input": "setSSLCRLMemSizeByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "set_ssld_failure_count": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSSLDFailureCount",
-      "input": "setSSLDFailureCount",
-      "namespace_identifier": "zeusns"
-    },
-    "set_ssld_failure_count_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSSLDFailureCountByLocation",
-      "input": "setSSLDFailureCountByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "set_ssldpkcs11_lib": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSSLDPKCS11Lib",
-      "input": "setSSLDPKCS11Lib",
-      "namespace_identifier": "zeusns"
-    },
-    "set_ssldpkcs11_lib_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSSLDPKCS11LibByLocation",
-      "input": "setSSLDPKCS11LibByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "set_ssldpkcs11_user_pin": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSSLDPKCS11UserPIN",
-      "input": "setSSLDPKCS11UserPIN",
-      "namespace_identifier": "zeusns"
-    },
-    "set_ssldpkcs11_user_pin_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSSLDPKCS11UserPINByLocation",
-      "input": "setSSLDPKCS11UserPINByLocation",
       "namespace_identifier": "zeusns"
     },
     "set_ssl_hardware_accelerator": {
@@ -5356,11 +5321,6 @@
       "input": "setSSLHardwareTypeByLocation",
       "namespace_identifier": "zeusns"
     },
-    "set_ssl_max_handshake_message_size": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSSLMaxHandshakeMessageSize",
-      "input": "setSSLMaxHandshakeMessageSize",
-      "namespace_identifier": "zeusns"
-    },
     "set_ssl_session_cache_size": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSSLSessionCacheSize",
       "input": "setSSLSessionCacheSize",
@@ -5431,36 +5391,6 @@
       "input": "setSSLSupportTLS1ByLocation",
       "namespace_identifier": "zeusns"
     },
-    "set_shared_pool_size": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSharedPoolSize",
-      "input": "setSharedPoolSize",
-      "namespace_identifier": "zeusns"
-    },
-    "set_shared_pool_size_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSharedPoolSizeByLocation",
-      "input": "setSharedPoolSizeByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "set_soap_idle_minutes": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSoapIdleMinutes",
-      "input": "setSoapIdleMinutes",
-      "namespace_identifier": "zeusns"
-    },
-    "set_soap_idle_minutes_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSoapIdleMinutesByLocation",
-      "input": "setSoapIdleMinutesByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "set_socket_optimizations": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSocketOptimizations",
-      "input": "setSocketOptimizations",
-      "namespace_identifier": "zeusns"
-    },
-    "set_socket_optimizations_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSocketOptimizationsByLocation",
-      "input": "setSocketOptimizationsByLocation",
-      "namespace_identifier": "zeusns"
-    },
     "set_ssld_accel": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSsldAccel",
       "input": "setSsldAccel",
@@ -5471,6 +5401,16 @@
       "input": "setSsldAccelByLocation",
       "namespace_identifier": "zeusns"
     },
+    "set_ssld_failure_count": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSSLDFailureCount",
+      "input": "setSSLDFailureCount",
+      "namespace_identifier": "zeusns"
+    },
+    "set_ssld_failure_count_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSSLDFailureCountByLocation",
+      "input": "setSSLDFailureCountByLocation",
+      "namespace_identifier": "zeusns"
+    },
     "set_ssld_library": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSsldLibrary",
       "input": "setSsldLibrary",
@@ -5479,6 +5419,26 @@
     "set_ssld_library_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSsldLibraryByLocation",
       "input": "setSsldLibraryByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "set_ssldpkcs11_lib": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSSLDPKCS11Lib",
+      "input": "setSSLDPKCS11Lib",
+      "namespace_identifier": "zeusns"
+    },
+    "set_ssldpkcs11_lib_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSSLDPKCS11LibByLocation",
+      "input": "setSSLDPKCS11LibByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "set_ssldpkcs11_user_pin": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSSLDPKCS11UserPIN",
+      "input": "setSSLDPKCS11UserPIN",
+      "namespace_identifier": "zeusns"
+    },
+    "set_ssldpkcs11_user_pin_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/GlobalSettings/setSSLDPKCS11UserPINByLocation",
+      "input": "setSSLDPKCS11UserPINByLocation",
       "namespace_identifier": "zeusns"
     },
     "set_state_sync_time": {
@@ -6070,16 +6030,6 @@
       "input": "getErrorFile",
       "namespace_identifier": "zeusns"
     },
-    "get_ftp_support_rfc2428": {
-      "action": "http://soap.zeus.com/zxtm/1.0/Pool/getFTPSupportRfc2428",
-      "input": "getFTPSupportRfc2428",
-      "namespace_identifier": "zeusns"
-    },
-    "get_ftp_support_rfc2428_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/Pool/getFTPSupportRfc2428ByLocation",
-      "input": "getFTPSupportRfc2428ByLocation",
-      "namespace_identifier": "zeusns"
-    },
     "get_failpool": {
       "action": "http://soap.zeus.com/zxtm/1.0/Pool/getFailpool",
       "input": "getFailpool",
@@ -6088,6 +6038,16 @@
     "get_failpool_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/Pool/getFailpoolByLocation",
       "input": "getFailpoolByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "get_ftp_support_rfc2428": {
+      "action": "http://soap.zeus.com/zxtm/1.0/Pool/getFTPSupportRfc2428",
+      "input": "getFTPSupportRfc2428",
+      "namespace_identifier": "zeusns"
+    },
+    "get_ftp_support_rfc2428_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/Pool/getFTPSupportRfc2428ByLocation",
+      "input": "getFTPSupportRfc2428ByLocation",
       "namespace_identifier": "zeusns"
     },
     "get_keepalive": {
@@ -6710,16 +6670,6 @@
       "input": "setErrorFile",
       "namespace_identifier": "zeusns"
     },
-    "set_ftp_support_rfc2428": {
-      "action": "http://soap.zeus.com/zxtm/1.0/Pool/setFTPSupportRfc2428",
-      "input": "setFTPSupportRfc2428",
-      "namespace_identifier": "zeusns"
-    },
-    "set_ftp_support_rfc2428_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/Pool/setFTPSupportRfc2428ByLocation",
-      "input": "setFTPSupportRfc2428ByLocation",
-      "namespace_identifier": "zeusns"
-    },
     "set_failpool": {
       "action": "http://soap.zeus.com/zxtm/1.0/Pool/setFailpool",
       "input": "setFailpool",
@@ -6728,6 +6678,16 @@
     "set_failpool_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/Pool/setFailpoolByLocation",
       "input": "setFailpoolByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "set_ftp_support_rfc2428": {
+      "action": "http://soap.zeus.com/zxtm/1.0/Pool/setFTPSupportRfc2428",
+      "input": "setFTPSupportRfc2428",
+      "namespace_identifier": "zeusns"
+    },
+    "set_ftp_support_rfc2428_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/Pool/setFTPSupportRfc2428ByLocation",
+      "input": "setFTPSupportRfc2428ByLocation",
       "namespace_identifier": "zeusns"
     },
     "set_keepalive": {
@@ -7781,6 +7741,11 @@
       "input": "getLicensekeyNumber",
       "namespace_identifier": "zeusns"
     },
+    "get_listen_i_ps": {
+      "action": "http://soap.zeus.com/zxtm/1.0/System/Stats/getListenIPs",
+      "input": "getListenIPs",
+      "namespace_identifier": "zeusns"
+    },
     "get_listen_ip_bytes_in": {
       "action": "http://soap.zeus.com/zxtm/1.0/System/Stats/getListenIPBytesIn",
       "input": "getListenIPBytesIn",
@@ -7804,11 +7769,6 @@
     "get_listen_ip_total_conn": {
       "action": "http://soap.zeus.com/zxtm/1.0/System/Stats/getListenIPTotalConn",
       "input": "getListenIPTotalConn",
-      "namespace_identifier": "zeusns"
-    },
-    "get_listen_i_ps": {
-      "action": "http://soap.zeus.com/zxtm/1.0/System/Stats/getListenIPs",
-      "input": "getListenIPs",
       "namespace_identifier": "zeusns"
     },
     "get_location_load": {
@@ -8441,6 +8401,11 @@
       "input": "getSslCipherAESEncrypts",
       "namespace_identifier": "zeusns"
     },
+    "get_ssl_cipher_decrypts": {
+      "action": "http://soap.zeus.com/zxtm/1.0/System/Stats/getSslCipherDecrypts",
+      "input": "getSslCipherDecrypts",
+      "namespace_identifier": "zeusns"
+    },
     "get_ssl_cipher_des_decrypts": {
       "action": "http://soap.zeus.com/zxtm/1.0/System/Stats/getSslCipherDESDecrypts",
       "input": "getSslCipherDESDecrypts",
@@ -8449,11 +8414,6 @@
     "get_ssl_cipher_des_encrypts": {
       "action": "http://soap.zeus.com/zxtm/1.0/System/Stats/getSslCipherDESEncrypts",
       "input": "getSslCipherDESEncrypts",
-      "namespace_identifier": "zeusns"
-    },
-    "get_ssl_cipher_decrypts": {
-      "action": "http://soap.zeus.com/zxtm/1.0/System/Stats/getSslCipherDecrypts",
-      "input": "getSslCipherDecrypts",
       "namespace_identifier": "zeusns"
     },
     "get_ssl_cipher_encrypts": {
@@ -8711,9 +8671,9 @@
       "input": "getTotalTransactions",
       "namespace_identifier": "zeusns"
     },
-    "get_traffic_iparp_message": {
-      "action": "http://soap.zeus.com/zxtm/1.0/System/Stats/getTrafficIPARPMessage",
-      "input": "getTrafficIPARPMessage",
+    "get_traffic_i_ps": {
+      "action": "http://soap.zeus.com/zxtm/1.0/System/Stats/getTrafficIPs",
+      "input": "getTrafficIPs",
       "namespace_identifier": "zeusns"
     },
     "get_traffic_ip_gateway_ping_requests": {
@@ -8761,9 +8721,9 @@
       "input": "getTrafficIPTime",
       "namespace_identifier": "zeusns"
     },
-    "get_traffic_i_ps": {
-      "action": "http://soap.zeus.com/zxtm/1.0/System/Stats/getTrafficIPs",
-      "input": "getTrafficIPs",
+    "get_traffic_iparp_message": {
+      "action": "http://soap.zeus.com/zxtm/1.0/System/Stats/getTrafficIPARPMessage",
+      "input": "getTrafficIPARPMessage",
       "namespace_identifier": "zeusns"
     },
     "get_uni_session_cache_entries": {
@@ -9369,16 +9329,6 @@
       "input": "addSSLNeverExpiringClientCertificateAuthoritiesByLocation",
       "namespace_identifier": "zeusns"
     },
-    "add_sslocsp_issuers": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/addSSLOCSPIssuers",
-      "input": "addSSLOCSPIssuers",
-      "namespace_identifier": "zeusns"
-    },
-    "add_sslocsp_issuers_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/addSSLOCSPIssuersByLocation",
-      "input": "addSSLOCSPIssuersByLocation",
-      "namespace_identifier": "zeusns"
-    },
     "add_ssl_sites": {
       "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/addSSLSites",
       "input": "addSSLSites",
@@ -9387,6 +9337,16 @@
     "add_ssl_sites_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/addSSLSitesByLocation",
       "input": "addSSLSitesByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "add_sslocsp_issuers": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/addSSLOCSPIssuers",
+      "input": "addSSLOCSPIssuers",
+      "namespace_identifier": "zeusns"
+    },
+    "add_sslocsp_issuers_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/addSSLOCSPIssuersByLocation",
+      "input": "addSSLOCSPIssuersByLocation",
       "namespace_identifier": "zeusns"
     },
     "add_virtual_server": {
@@ -9494,16 +9454,6 @@
       "input": "getCompressionLevelByLocation",
       "namespace_identifier": "zeusns"
     },
-    "get_compression_mime_types": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getCompressionMIMETypes",
-      "input": "getCompressionMIMETypes",
-      "namespace_identifier": "zeusns"
-    },
-    "get_compression_mime_types_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getCompressionMIMETypesByLocation",
-      "input": "getCompressionMIMETypesByLocation",
-      "namespace_identifier": "zeusns"
-    },
     "get_compression_max_size": {
       "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getCompressionMaxSize",
       "input": "getCompressionMaxSize",
@@ -9512,6 +9462,16 @@
     "get_compression_max_size_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getCompressionMaxSizeByLocation",
       "input": "getCompressionMaxSizeByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "get_compression_mime_types": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getCompressionMIMETypes",
+      "input": "getCompressionMIMETypes",
+      "namespace_identifier": "zeusns"
+    },
+    "get_compression_mime_types_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getCompressionMIMETypesByLocation",
+      "input": "getCompressionMIMETypesByLocation",
       "namespace_identifier": "zeusns"
     },
     "get_compression_min_size": {
@@ -9764,16 +9724,6 @@
       "input": "getLogFormatByLocation",
       "namespace_identifier": "zeusns"
     },
-    "get_log_ssl_failures": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getLogSSLFailures",
-      "input": "getLogSSLFailures",
-      "namespace_identifier": "zeusns"
-    },
-    "get_log_ssl_failures_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getLogSSLFailuresByLocation",
-      "input": "getLogSSLFailuresByLocation",
-      "namespace_identifier": "zeusns"
-    },
     "get_log_server_connection_failures": {
       "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getLogServerConnectionFailures",
       "input": "getLogServerConnectionFailures",
@@ -9784,24 +9734,14 @@
       "input": "getLogServerConnectionFailuresByLocation",
       "namespace_identifier": "zeusns"
     },
-    "get_mime_auto_detect": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getMIMEAutoDetect",
-      "input": "getMIMEAutoDetect",
+    "get_log_ssl_failures": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getLogSSLFailures",
+      "input": "getLogSSLFailures",
       "namespace_identifier": "zeusns"
     },
-    "get_mime_auto_detect_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getMIMEAutoDetectByLocation",
-      "input": "getMIMEAutoDetectByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "get_mime_default_type": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getMIMEDefaultType",
-      "input": "getMIMEDefaultType",
-      "namespace_identifier": "zeusns"
-    },
-    "get_mime_default_type_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getMIMEDefaultTypeByLocation",
-      "input": "getMIMEDefaultTypeByLocation",
+    "get_log_ssl_failures_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getLogSSLFailuresByLocation",
+      "input": "getLogSSLFailuresByLocation",
       "namespace_identifier": "zeusns"
     },
     "get_max_client_buffer": {
@@ -9822,6 +9762,26 @@
     "get_max_server_buffer_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getMaxServerBufferByLocation",
       "input": "getMaxServerBufferByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "get_mime_auto_detect": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getMIMEAutoDetect",
+      "input": "getMIMEAutoDetect",
+      "namespace_identifier": "zeusns"
+    },
+    "get_mime_auto_detect_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getMIMEAutoDetectByLocation",
+      "input": "getMIMEAutoDetectByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "get_mime_default_type": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getMIMEDefaultType",
+      "input": "getMIMEDefaultType",
+      "namespace_identifier": "zeusns"
+    },
+    "get_mime_default_type_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getMIMEDefaultTypeByLocation",
+      "input": "getMIMEDefaultTypeByLocation",
       "namespace_identifier": "zeusns"
     },
     "get_note": {
@@ -9862,26 +9822,6 @@
     "get_proxy_close_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getProxyCloseByLocation",
       "input": "getProxyCloseByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "get_rtsp_port_range": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getRTSPPortRange",
-      "input": "getRTSPPortRange",
-      "namespace_identifier": "zeusns"
-    },
-    "get_rtsp_port_range_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getRTSPPortRangeByLocation",
-      "input": "getRTSPPortRangeByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "get_rtsp_streaming_timeout": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getRTSPStreamingTimeout",
-      "input": "getRTSPStreamingTimeout",
-      "namespace_identifier": "zeusns"
-    },
-    "get_rtsp_streaming_timeout_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getRTSPStreamingTimeoutByLocation",
-      "input": "getRTSPStreamingTimeoutByLocation",
       "namespace_identifier": "zeusns"
     },
     "get_request_syslog_enabled": {
@@ -9954,6 +9894,26 @@
       "input": "getRewriteSIPURIByLocation",
       "namespace_identifier": "zeusns"
     },
+    "get_rtsp_port_range": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getRTSPPortRange",
+      "input": "getRTSPPortRange",
+      "namespace_identifier": "zeusns"
+    },
+    "get_rtsp_port_range_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getRTSPPortRangeByLocation",
+      "input": "getRTSPPortRangeByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "get_rtsp_streaming_timeout": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getRTSPStreamingTimeout",
+      "input": "getRTSPStreamingTimeout",
+      "namespace_identifier": "zeusns"
+    },
+    "get_rtsp_streaming_timeout_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getRTSPStreamingTimeoutByLocation",
+      "input": "getRTSPStreamingTimeoutByLocation",
+      "namespace_identifier": "zeusns"
+    },
     "get_rules": {
       "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getRules",
       "input": "getRules",
@@ -9962,6 +9922,26 @@
     "get_rules_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getRulesByLocation",
       "input": "getRulesByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "get_serverfirst_banner": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getServerfirstBanner",
+      "input": "getServerfirstBanner",
+      "namespace_identifier": "zeusns"
+    },
+    "get_serverfirst_banner_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getServerfirstBannerByLocation",
+      "input": "getServerfirstBannerByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "get_service_level_monitoring": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getServiceLevelMonitoring",
+      "input": "getServiceLevelMonitoring",
+      "namespace_identifier": "zeusns"
+    },
+    "get_service_level_monitoring_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getServiceLevelMonitoringByLocation",
+      "input": "getServiceLevelMonitoringByLocation",
       "namespace_identifier": "zeusns"
     },
     "get_sip_dangerous_request_mode": {
@@ -10032,6 +10012,16 @@
     "get_sip_timeout_messages_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSIPTimeoutMessagesByLocation",
       "input": "getSIPTimeoutMessagesByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "get_sip_transaction_timeout": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSipTransactionTimeout",
+      "input": "getSipTransactionTimeout",
+      "namespace_identifier": "zeusns"
+    },
+    "get_sip_transaction_timeout_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSipTransactionTimeoutByLocation",
+      "input": "getSipTransactionTimeoutByLocation",
       "namespace_identifier": "zeusns"
     },
     "get_ssl_certificate": {
@@ -10109,56 +10099,6 @@
       "input": "getSSLNeverExpiringClientCertificateAuthoritiesByLocation",
       "namespace_identifier": "zeusns"
     },
-    "get_sslocsp_defaults": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSSLOCSPDefaults",
-      "input": "getSSLOCSPDefaults",
-      "namespace_identifier": "zeusns"
-    },
-    "get_sslocsp_defaults_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSSLOCSPDefaultsByLocation",
-      "input": "getSSLOCSPDefaultsByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "get_sslocsp_issuers": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSSLOCSPIssuers",
-      "input": "getSSLOCSPIssuers",
-      "namespace_identifier": "zeusns"
-    },
-    "get_sslocsp_issuers_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSSLOCSPIssuersByLocation",
-      "input": "getSSLOCSPIssuersByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "get_sslocsp_max_response_age": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSSLOCSPMaxResponseAge",
-      "input": "getSSLOCSPMaxResponseAge",
-      "namespace_identifier": "zeusns"
-    },
-    "get_sslocsp_max_response_age_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSSLOCSPMaxResponseAgeByLocation",
-      "input": "getSSLOCSPMaxResponseAgeByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "get_sslocsp_time_tolerance": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSSLOCSPTimeTolerance",
-      "input": "getSSLOCSPTimeTolerance",
-      "namespace_identifier": "zeusns"
-    },
-    "get_sslocsp_time_tolerance_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSSLOCSPTimeToleranceByLocation",
-      "input": "getSSLOCSPTimeToleranceByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "get_sslocsp_timeout": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSSLOCSPTimeout",
-      "input": "getSSLOCSPTimeout",
-      "namespace_identifier": "zeusns"
-    },
-    "get_sslocsp_timeout_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSSLOCSPTimeoutByLocation",
-      "input": "getSSLOCSPTimeoutByLocation",
-      "namespace_identifier": "zeusns"
-    },
     "get_ssl_prefer_ss_lv3": {
       "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSSLPreferSSLv3",
       "input": "getSSLPreferSSLv3",
@@ -10219,34 +10159,54 @@
       "input": "getSSLUseOCSPByLocation",
       "namespace_identifier": "zeusns"
     },
-    "get_serverfirst_banner": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getServerfirstBanner",
-      "input": "getServerfirstBanner",
+    "get_sslocsp_defaults": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSSLOCSPDefaults",
+      "input": "getSSLOCSPDefaults",
       "namespace_identifier": "zeusns"
     },
-    "get_serverfirst_banner_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getServerfirstBannerByLocation",
-      "input": "getServerfirstBannerByLocation",
+    "get_sslocsp_defaults_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSSLOCSPDefaultsByLocation",
+      "input": "getSSLOCSPDefaultsByLocation",
       "namespace_identifier": "zeusns"
     },
-    "get_service_level_monitoring": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getServiceLevelMonitoring",
-      "input": "getServiceLevelMonitoring",
+    "get_sslocsp_issuers": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSSLOCSPIssuers",
+      "input": "getSSLOCSPIssuers",
       "namespace_identifier": "zeusns"
     },
-    "get_service_level_monitoring_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getServiceLevelMonitoringByLocation",
-      "input": "getServiceLevelMonitoringByLocation",
+    "get_sslocsp_issuers_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSSLOCSPIssuersByLocation",
+      "input": "getSSLOCSPIssuersByLocation",
       "namespace_identifier": "zeusns"
     },
-    "get_sip_transaction_timeout": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSipTransactionTimeout",
-      "input": "getSipTransactionTimeout",
+    "get_sslocsp_max_response_age": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSSLOCSPMaxResponseAge",
+      "input": "getSSLOCSPMaxResponseAge",
       "namespace_identifier": "zeusns"
     },
-    "get_sip_transaction_timeout_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSipTransactionTimeoutByLocation",
-      "input": "getSipTransactionTimeoutByLocation",
+    "get_sslocsp_max_response_age_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSSLOCSPMaxResponseAgeByLocation",
+      "input": "getSSLOCSPMaxResponseAgeByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "get_sslocsp_time_tolerance": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSSLOCSPTimeTolerance",
+      "input": "getSSLOCSPTimeTolerance",
+      "namespace_identifier": "zeusns"
+    },
+    "get_sslocsp_time_tolerance_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSSLOCSPTimeToleranceByLocation",
+      "input": "getSSLOCSPTimeToleranceByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "get_sslocsp_timeout": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSSLOCSPTimeout",
+      "input": "getSSLOCSPTimeout",
+      "namespace_identifier": "zeusns"
+    },
+    "get_sslocsp_timeout_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/getSSLOCSPTimeoutByLocation",
+      "input": "getSSLOCSPTimeoutByLocation",
       "namespace_identifier": "zeusns"
     },
     "get_timeout": {
@@ -10374,16 +10334,6 @@
       "input": "removeFTPPortRangeByLocation",
       "namespace_identifier": "zeusns"
     },
-    "remove_rtsp_port_range": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/removeRTSPPortRange",
-      "input": "removeRTSPPortRange",
-      "namespace_identifier": "zeusns"
-    },
-    "remove_rtsp_port_range_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/removeRTSPPortRangeByLocation",
-      "input": "removeRTSPPortRangeByLocation",
-      "namespace_identifier": "zeusns"
-    },
     "remove_response_rules": {
       "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/removeResponseRules",
       "input": "removeResponseRules",
@@ -10392,6 +10342,16 @@
     "remove_response_rules_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/removeResponseRulesByLocation",
       "input": "removeResponseRulesByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "remove_rtsp_port_range": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/removeRTSPPortRange",
+      "input": "removeRTSPPortRange",
+      "namespace_identifier": "zeusns"
+    },
+    "remove_rtsp_port_range_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/removeRTSPPortRangeByLocation",
+      "input": "removeRTSPPortRangeByLocation",
       "namespace_identifier": "zeusns"
     },
     "remove_rules": {
@@ -10519,16 +10479,6 @@
       "input": "setCompressionLevelByLocation",
       "namespace_identifier": "zeusns"
     },
-    "set_compression_mime_types": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setCompressionMIMETypes",
-      "input": "setCompressionMIMETypes",
-      "namespace_identifier": "zeusns"
-    },
-    "set_compression_mime_types_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setCompressionMIMETypesByLocation",
-      "input": "setCompressionMIMETypesByLocation",
-      "namespace_identifier": "zeusns"
-    },
     "set_compression_max_size": {
       "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setCompressionMaxSize",
       "input": "setCompressionMaxSize",
@@ -10537,6 +10487,16 @@
     "set_compression_max_size_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setCompressionMaxSizeByLocation",
       "input": "setCompressionMaxSizeByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "set_compression_mime_types": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setCompressionMIMETypes",
+      "input": "setCompressionMIMETypes",
+      "namespace_identifier": "zeusns"
+    },
+    "set_compression_mime_types_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setCompressionMIMETypesByLocation",
+      "input": "setCompressionMIMETypesByLocation",
       "namespace_identifier": "zeusns"
     },
     "set_compression_min_size": {
@@ -10789,16 +10749,6 @@
       "input": "setLogFormatByLocation",
       "namespace_identifier": "zeusns"
     },
-    "set_log_ssl_failures": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setLogSSLFailures",
-      "input": "setLogSSLFailures",
-      "namespace_identifier": "zeusns"
-    },
-    "set_log_ssl_failures_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setLogSSLFailuresByLocation",
-      "input": "setLogSSLFailuresByLocation",
-      "namespace_identifier": "zeusns"
-    },
     "set_log_server_connection_failures": {
       "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setLogServerConnectionFailures",
       "input": "setLogServerConnectionFailures",
@@ -10809,24 +10759,14 @@
       "input": "setLogServerConnectionFailuresByLocation",
       "namespace_identifier": "zeusns"
     },
-    "set_mime_auto_detect": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setMIMEAutoDetect",
-      "input": "setMIMEAutoDetect",
+    "set_log_ssl_failures": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setLogSSLFailures",
+      "input": "setLogSSLFailures",
       "namespace_identifier": "zeusns"
     },
-    "set_mime_auto_detect_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setMIMEAutoDetectByLocation",
-      "input": "setMIMEAutoDetectByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "set_mime_default_type": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setMIMEDefaultType",
-      "input": "setMIMEDefaultType",
-      "namespace_identifier": "zeusns"
-    },
-    "set_mime_default_type_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setMIMEDefaultTypeByLocation",
-      "input": "setMIMEDefaultTypeByLocation",
+    "set_log_ssl_failures_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setLogSSLFailuresByLocation",
+      "input": "setLogSSLFailuresByLocation",
       "namespace_identifier": "zeusns"
     },
     "set_max_client_buffer": {
@@ -10847,6 +10787,26 @@
     "set_max_server_buffer_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setMaxServerBufferByLocation",
       "input": "setMaxServerBufferByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "set_mime_auto_detect": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setMIMEAutoDetect",
+      "input": "setMIMEAutoDetect",
+      "namespace_identifier": "zeusns"
+    },
+    "set_mime_auto_detect_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setMIMEAutoDetectByLocation",
+      "input": "setMIMEAutoDetectByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "set_mime_default_type": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setMIMEDefaultType",
+      "input": "setMIMEDefaultType",
+      "namespace_identifier": "zeusns"
+    },
+    "set_mime_default_type_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setMIMEDefaultTypeByLocation",
+      "input": "setMIMEDefaultTypeByLocation",
       "namespace_identifier": "zeusns"
     },
     "set_note": {
@@ -10887,26 +10847,6 @@
     "set_proxy_close_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setProxyCloseByLocation",
       "input": "setProxyCloseByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "set_rtsp_port_range": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setRTSPPortRange",
-      "input": "setRTSPPortRange",
-      "namespace_identifier": "zeusns"
-    },
-    "set_rtsp_port_range_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setRTSPPortRangeByLocation",
-      "input": "setRTSPPortRangeByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "set_rtsp_streaming_timeout": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setRTSPStreamingTimeout",
-      "input": "setRTSPStreamingTimeout",
-      "namespace_identifier": "zeusns"
-    },
-    "set_rtsp_streaming_timeout_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setRTSPStreamingTimeoutByLocation",
-      "input": "setRTSPStreamingTimeoutByLocation",
       "namespace_identifier": "zeusns"
     },
     "set_request_syslog_enabled": {
@@ -10979,6 +10919,26 @@
       "input": "setRewriteSIPURIByLocation",
       "namespace_identifier": "zeusns"
     },
+    "set_rtsp_port_range": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setRTSPPortRange",
+      "input": "setRTSPPortRange",
+      "namespace_identifier": "zeusns"
+    },
+    "set_rtsp_port_range_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setRTSPPortRangeByLocation",
+      "input": "setRTSPPortRangeByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "set_rtsp_streaming_timeout": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setRTSPStreamingTimeout",
+      "input": "setRTSPStreamingTimeout",
+      "namespace_identifier": "zeusns"
+    },
+    "set_rtsp_streaming_timeout_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setRTSPStreamingTimeoutByLocation",
+      "input": "setRTSPStreamingTimeoutByLocation",
+      "namespace_identifier": "zeusns"
+    },
     "set_rules": {
       "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setRules",
       "input": "setRules",
@@ -10987,6 +10947,26 @@
     "set_rules_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setRulesByLocation",
       "input": "setRulesByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "set_serverfirst_banner": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setServerfirstBanner",
+      "input": "setServerfirstBanner",
+      "namespace_identifier": "zeusns"
+    },
+    "set_serverfirst_banner_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setServerfirstBannerByLocation",
+      "input": "setServerfirstBannerByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "set_service_level_monitoring": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setServiceLevelMonitoring",
+      "input": "setServiceLevelMonitoring",
+      "namespace_identifier": "zeusns"
+    },
+    "set_service_level_monitoring_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setServiceLevelMonitoringByLocation",
+      "input": "setServiceLevelMonitoringByLocation",
       "namespace_identifier": "zeusns"
     },
     "set_sip_dangerous_request_mode": {
@@ -11057,6 +11037,16 @@
     "set_sip_timeout_messages_by_location": {
       "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSIPTimeoutMessagesByLocation",
       "input": "setSIPTimeoutMessagesByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "set_sip_transaction_timeout": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSipTransactionTimeout",
+      "input": "setSipTransactionTimeout",
+      "namespace_identifier": "zeusns"
+    },
+    "set_sip_transaction_timeout_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSipTransactionTimeoutByLocation",
+      "input": "setSipTransactionTimeoutByLocation",
       "namespace_identifier": "zeusns"
     },
     "set_ssl_certificate": {
@@ -11134,56 +11124,6 @@
       "input": "setSSLNeverExpiringClientCertificateAuthoritiesByLocation",
       "namespace_identifier": "zeusns"
     },
-    "set_sslocsp_defaults": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSSLOCSPDefaults",
-      "input": "setSSLOCSPDefaults",
-      "namespace_identifier": "zeusns"
-    },
-    "set_sslocsp_defaults_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSSLOCSPDefaultsByLocation",
-      "input": "setSSLOCSPDefaultsByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "set_sslocsp_issuers": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSSLOCSPIssuers",
-      "input": "setSSLOCSPIssuers",
-      "namespace_identifier": "zeusns"
-    },
-    "set_sslocsp_issuers_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSSLOCSPIssuersByLocation",
-      "input": "setSSLOCSPIssuersByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "set_sslocsp_max_response_age": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSSLOCSPMaxResponseAge",
-      "input": "setSSLOCSPMaxResponseAge",
-      "namespace_identifier": "zeusns"
-    },
-    "set_sslocsp_max_response_age_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSSLOCSPMaxResponseAgeByLocation",
-      "input": "setSSLOCSPMaxResponseAgeByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "set_sslocsp_time_tolerance": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSSLOCSPTimeTolerance",
-      "input": "setSSLOCSPTimeTolerance",
-      "namespace_identifier": "zeusns"
-    },
-    "set_sslocsp_time_tolerance_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSSLOCSPTimeToleranceByLocation",
-      "input": "setSSLOCSPTimeToleranceByLocation",
-      "namespace_identifier": "zeusns"
-    },
-    "set_sslocsp_timeout": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSSLOCSPTimeout",
-      "input": "setSSLOCSPTimeout",
-      "namespace_identifier": "zeusns"
-    },
-    "set_sslocsp_timeout_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSSLOCSPTimeoutByLocation",
-      "input": "setSSLOCSPTimeoutByLocation",
-      "namespace_identifier": "zeusns"
-    },
     "set_ssl_prefer_ss_lv3": {
       "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSSLPreferSSLv3",
       "input": "setSSLPreferSSLv3",
@@ -11234,34 +11174,54 @@
       "input": "setSSLUseOCSPByLocation",
       "namespace_identifier": "zeusns"
     },
-    "set_serverfirst_banner": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setServerfirstBanner",
-      "input": "setServerfirstBanner",
+    "set_sslocsp_defaults": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSSLOCSPDefaults",
+      "input": "setSSLOCSPDefaults",
       "namespace_identifier": "zeusns"
     },
-    "set_serverfirst_banner_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setServerfirstBannerByLocation",
-      "input": "setServerfirstBannerByLocation",
+    "set_sslocsp_defaults_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSSLOCSPDefaultsByLocation",
+      "input": "setSSLOCSPDefaultsByLocation",
       "namespace_identifier": "zeusns"
     },
-    "set_service_level_monitoring": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setServiceLevelMonitoring",
-      "input": "setServiceLevelMonitoring",
+    "set_sslocsp_issuers": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSSLOCSPIssuers",
+      "input": "setSSLOCSPIssuers",
       "namespace_identifier": "zeusns"
     },
-    "set_service_level_monitoring_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setServiceLevelMonitoringByLocation",
-      "input": "setServiceLevelMonitoringByLocation",
+    "set_sslocsp_issuers_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSSLOCSPIssuersByLocation",
+      "input": "setSSLOCSPIssuersByLocation",
       "namespace_identifier": "zeusns"
     },
-    "set_sip_transaction_timeout": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSipTransactionTimeout",
-      "input": "setSipTransactionTimeout",
+    "set_sslocsp_max_response_age": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSSLOCSPMaxResponseAge",
+      "input": "setSSLOCSPMaxResponseAge",
       "namespace_identifier": "zeusns"
     },
-    "set_sip_transaction_timeout_by_location": {
-      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSipTransactionTimeoutByLocation",
-      "input": "setSipTransactionTimeoutByLocation",
+    "set_sslocsp_max_response_age_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSSLOCSPMaxResponseAgeByLocation",
+      "input": "setSSLOCSPMaxResponseAgeByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "set_sslocsp_time_tolerance": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSSLOCSPTimeTolerance",
+      "input": "setSSLOCSPTimeTolerance",
+      "namespace_identifier": "zeusns"
+    },
+    "set_sslocsp_time_tolerance_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSSLOCSPTimeToleranceByLocation",
+      "input": "setSSLOCSPTimeToleranceByLocation",
+      "namespace_identifier": "zeusns"
+    },
+    "set_sslocsp_timeout": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSSLOCSPTimeout",
+      "input": "setSSLOCSPTimeout",
+      "namespace_identifier": "zeusns"
+    },
+    "set_sslocsp_timeout_by_location": {
+      "action": "http://soap.zeus.com/zxtm/1.0/VirtualServer/setSSLOCSPTimeoutByLocation",
+      "input": "setSSLOCSPTimeoutByLocation",
       "namespace_identifier": "zeusns"
     },
     "set_timeout": {
