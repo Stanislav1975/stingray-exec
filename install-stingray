@@ -8,6 +8,13 @@ fi
 apt-get update
 apt-get install -y vim-nox curl
 
+cat >/usr/local/bin/stingray-primaryip <<EOF
+#!/bin/sh
+exec ifconfig eth1 | awk -F: '/inet addr/ { gsub(/[^0-9\.]/, "", \$2) ; print \$2 }'
+EOF
+chmod 755 /usr/local/bin/stingray-primaryip
+
+
 set -e
 set -x
 
@@ -28,5 +35,11 @@ echo
 echo "--------------------------------------------------"
 echo "---- Stingray install all done.  Don't panic. ----"
 echo "--------------------------------------------------"
+echo
+echo "----------------------------------------------------------------"
+echo "---- Sadly, you'll still have to go here and click on the   ----"
+echo "---- on the 'developer mode' button:                        ----"
+echo "---- https://$(stingray-primaryip):9090/apps/sxtm/login.cgi ----"
+echo "----------------------------------------------------------------"
 echo
 exit 0
