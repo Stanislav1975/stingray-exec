@@ -1,0 +1,10 @@
+#!/usr/bin/env stingray-exec
+# vim:filetype=ruby
+
+ssl_verify_mode :none
+
+# Adds a pool named by the first positional argument with nodes given from all
+# remaining arguments.  Note that we don't start at `ARGV.first` because this
+# script is evaluated from within an existing ruby process.
+pool.add_pool(ARGV[1] => ARGV[2..ARGV.length])
+puts "Added!"

@@ -1,0 +1,10 @@
+#!/usr/bin/env stingray-exec
+# vim:filetype=ruby
+
+ssl_verify_mode :none
+
+# Removes any number of named pools given as positional arguments.  Note that
+# we don't start at `ARGV.first` because this script is evaluated from within
+# an existing ruby process.
+pool.delete_pool(*ARGV[1..ARGV.length])
+puts "Deleted!"

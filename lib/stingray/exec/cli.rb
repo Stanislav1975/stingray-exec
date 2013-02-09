@@ -24,7 +24,9 @@ class Stingray::Exec::Cli
     end.parse!
 
     script = argv.first || ''
+    filename = ''
     if File.exists?(script)
+      filename = script
       script = File.read(script)
     end
 
@@ -35,8 +37,11 @@ class Stingray::Exec::Cli
     unless script.empty?
       Class.new(Object) do
         extend Stingray::Exec::DSL
-        stingray_exec do
-          eval(script)
+        begin
+          stingray_exec(script, filename, 1)
+        rescue => e
+          $stderr.puts e.message
+          $stderr.puts e.backtrace.join("\n") if ENV['DEBUG']
         end
       end
     else

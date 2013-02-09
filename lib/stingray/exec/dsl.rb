@@ -2,8 +2,12 @@ require 'stingray/exec'
 require 'stingray/control_api'
 
 module Stingray::Exec::DSL
-  def stingray_exec(&block)
-    instance_eval(&block)
+  def stingray_exec(string = '', filename = '', lineno = 0, &block)
+    unless string.empty?
+      instance_eval(string, filename, lineno)
+    else
+      instance_eval(&block)
+    end
   end
 
   Stingray::ControlApi::CONFIGURATIONS.each do |cfg_ns,variations|

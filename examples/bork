@@ -1,0 +1,6 @@
+#!/usr/bin/env stingray-exec
+# vim:filetype=ruby
+
+# Running this script with DEBUG=1 should demonstrate how the
+# backtrace includes *this* filename and the correct line number.
+bork
