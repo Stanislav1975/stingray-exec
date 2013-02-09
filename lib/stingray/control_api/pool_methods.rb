@@ -3,7 +3,7 @@ require 'stingray/control_api'
 module Stingray::ControlApi::PoolMethods
   # Adds pools with nodes.  The `pool_configs` argument should be a hash of
   # pool name => node list mappings
-  def add_pool(pool_configs)
+  def _custom_add_pool(pool_configs)
     body = {
       :names => {},
       :nodes => {
@@ -39,7 +39,7 @@ module Stingray::ControlApi::PoolMethods
   end
 
   # Deletes pools with names given in `names`, each of which should be a string.
-  def delete_pool(*names)
+  def _custom_delete_pool(*names)
     raise ArgumentError.new('No names given!') if names.empty?
 
     body = {
