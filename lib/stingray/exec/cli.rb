@@ -13,36 +13,86 @@ class Stingray::Exec::Cli
   See the 'examples' directory in the stingray-exec gem tree for some (surprise!)
   examples of how to do some stuff.
 
+  All of the command-line configuration flags may also be given as environmental
+  variables, as noted in the help text for each flag.
+
   EOB
 
   def self.main(argv = ARGV)
+    new(argv).run!
+  end
+
+  attr_reader :argv, :script, :filename
+
+  def initialize(argv)
+    @argv = argv
+  end
+
+  def run!
+    parse_options
+    prepare_script
+    configure
+    evaluate_script
+  end
+
+  private
+  def parse_options
     OptionParser.new do |opts|
       opts.banner = BANNER
-      opts.on('-v', '--verbose', 'Yelling.') do |v|
+      opts.on('-v', '--verbose', 'Yelling. (DEBUG=1)') do |v|
         ENV['DEBUG'] = '1'
       end
-      opts.on('-k', '--insecure',
-          'Allow "insecure" SSL connections, setting verification mode to :none') do |k|
+      opts.on('-k', '--insecure', 'Allow "insecure" SSL connections ' <<
+          '(STINGRAY_SSL_VERIFY_NONE=1)') do |k|
         ENV['STINGRAY_SSL_VERIFY_NONE'] = '1'
       end
+      opts.on('-u', '--user-password',
+          'Stingray username:password (STINGRAY_AUTH=<user>:<pass>)') do |u|
+        ENV['STINGRAY_AUTH'] = u
+      end
+      opts.on('-C', '--credentials', 'Credentials file containing ' <<
+          'username:password (STINGRAY_AUTH=<user>:<pass>)') do |c|
+        ENV['STINGRAY_AUTH'] = File.read(c).strip
+      end
+      opts.on('-E', '--endpoint',
+          'Stingray server SOAP endpoint (STINGRAY_ENDPOINT=<uri>)') do |endpoint|
+        ENV['STINGRAY_ENDPOINT'] = endpoint
+      end
+      opts.on('-V', '--stingray-version', 'Stingray server version, ' <<
+          'e.g. "9.0" or "9.1" (STINGRAY_VERSION="9.1")') do |ver|
+        ENV['STINGRAY_VERSION'] = ver
+      end
     end.parse!(argv)
+  end
 
-    script = argv.first || ''
-    filename = ''
-    if File.exists?(script)
-      filename = script
-      script = File.read(script)
+  def prepare_script
+    @script = argv.first || ''
+    @filename = ''
+    if File.exists?(@script)
+      @filename = @script
+      @script = File.read(@script)
+    elsif @script == '-'
+      @script = $stdin.read
     end
+  end
 
+  def configure
     Stingray::Exec.configure
+  end
 
+  def evaluate_script
     require_relative 'dsl'
 
-    unless script.empty?
+    # reassign so that scoping is happy once we're inside the new class block
+    script_string = script
+    script_filename = filename
+    shebang_offset = script_string =~ /^#!/ ? 1 : 0
+
+    unless script_string.empty?
       Class.new(Object) do
         extend Stingray::Exec::DSL
         begin
-          stingray_exec(script, filename, 1)
+          stingray_exec(script_string, script_filename, shebang_offset)
         rescue => e
           $stderr.puts e.message
           $stderr.puts e.backtrace.join("\n") if ENV['DEBUG']
