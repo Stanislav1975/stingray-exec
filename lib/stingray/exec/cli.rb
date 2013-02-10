@@ -7,18 +7,28 @@ class Stingray::Exec::Cli
 
   Executes scripts in the context of Stingray Traffic Manager configuration
   models, allowing for access to all methods documented in the Control API.  The
-  <script> argument may be a string expression or a filename, and if ommitted
-  will cause stingray-exec to drop into a console.
-
-  See the 'examples' directory in the stingray-exec gem tree for some
-  (surprise!) examples of how to do some stuff.
+  <script> argument may be a string expression or a filename (or "-" for stdin),
+  and if ommitted will cause stingray-exec to drop into a fancy DSL-tastic pry
+  console.
 
   All of the command-line configuration flags may also be given as
   environmental variables, as noted in the help text for each flag.  The
   "endpoint" flag/var deserves special attention as the expected value is buried
-  in the Stingray docs.  An example endpoint environmental variable is:
+  in the Stingray docs.
+  e.g.: STINGRAY_ENDPOINT='https://stingray-pool-master.example.com:9090/soap'
 
-      STINGRAY_ENDPOINT='https://stingray-pool-master.example.com:9090/soap'
+  See the 'examples' directory in the stingray-exec gem tree for some
+  (surprise!) examples of how to do stuff.
+
+  ------- FAIR WARNING: -------
+  The vast majority of Control API methods have been wrapped in very dumb
+  generated code.  Read-only methods work fine, but methods that take arguments
+  invariably require custom implementations -- the kind of thing that's typically
+  generated from a WSDL, which we can't legally redistribute.  The Control API
+  makes things even more fun by requiring the use of soapenc arrays and lists of
+  arrays.  If you want or need to implement such code, the "soap_helper_methods.rb"
+  file in the stingray-exec source may be of help. YMMV.
+
 
   EOB
 
