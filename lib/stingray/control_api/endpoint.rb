@@ -8,9 +8,7 @@ class Stingray::ControlApi::Endpoint
   class << self
     def full_endpoint_uri
       u = URI.parse(endpoint_uri)
-      user, password = auth
-      u.user = user
-      u.password = password
+      u.user, u.password = auth
       u.to_s
     end
 
