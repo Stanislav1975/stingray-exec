@@ -15,7 +15,7 @@ class Stingray::ControlApi::Endpoint
     end
 
     def endpoint_uri
-      ENV['STINGRAY_ENDPOINT'] || DEFAULT_ENDPOINT_URI
+      ENV['STINGRAY_ENDPOINT'] || DEFAULT_ENDPOINT
     end
 
     def auth
