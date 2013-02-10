@@ -41,4 +41,21 @@ describe 'Pool', :integration => true do
       pool.delete_pool(test_pool_name)
     end
   end
+
+  it 'should be able to add and remove monitors from pools' do
+    stingray_exec do
+      pool.add_pool(test_pool_name => ['localhost:9999'])
+      pool.add_monitors(test_pool_name => ['Simple HTTP', 'Ping'])
+      pool.remove_monitors(test_pool_name => ['Ping'])
+      pool.delete_pool(test_pool_name)
+    end
+  end
+
+  it 'should be able to set monitors for pools' do
+    stingray_exec do
+      pool.add_pool(test_pool_name => ['localhost:9999'])
+      pool.set_monitors(test_pool_name => ['Ping', 'Simple HTTP'])
+      pool.delete_pool(test_pool_name)
+    end
+  end
 end
