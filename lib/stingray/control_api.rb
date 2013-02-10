@@ -68,7 +68,7 @@ module Stingray
       end
 
       require 'savon'
-      require 'stingray/control_api/defaults'
+      require 'stingray/control_api/endpoint'
       require 'stingray/control_api/actions'
 
       const_set(sym, Class.new(Object) do
@@ -95,8 +95,8 @@ module Stingray
           end
         end
 
-        basic_auth(*Stingray::ControlApi::Defaults.auth)
-        endpoint Stingray::ControlApi::Defaults.endpoint_uri
+        basic_auth(*Stingray::ControlApi::Endpoint.auth)
+        endpoint Stingray::ControlApi::Endpoint.full_endpoint_uri
         namespace Stingray::ControlApi::Actions.send(:"#{snaked}_namespace")
 
         _methods_file = File.expand_path("../control_api/#{snaked}_methods.rb", __FILE__)

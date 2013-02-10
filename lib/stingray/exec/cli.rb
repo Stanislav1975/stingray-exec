@@ -6,15 +6,19 @@ class Stingray::Exec::Cli
   Usage: stingray-exec [options] <script>
 
   Executes scripts in the context of Stingray Traffic Manager configuration
-  models, allowing for access to all methods documented in the Control API.
-  The <script> argument may be a string expression or a filename, and if ommitted
+  models, allowing for access to all methods documented in the Control API.  The
+  <script> argument may be a string expression or a filename, and if ommitted
   will cause stingray-exec to drop into a console.
 
-  See the 'examples' directory in the stingray-exec gem tree for some (surprise!)
-  examples of how to do some stuff.
+  See the 'examples' directory in the stingray-exec gem tree for some
+  (surprise!) examples of how to do some stuff.
 
-  All of the command-line configuration flags may also be given as environmental
-  variables, as noted in the help text for each flag.
+  All of the command-line configuration flags may also be given as
+  environmental variables, as noted in the help text for each flag.  The
+  "endpoint" flag/var deserves special attention as the expected value is buried
+  in the Stingray docs.  An example endpoint environmental variable is:
+
+      STINGRAY_ENDPOINT='https://stingray-pool-master.example.com:9090/soap'
 
   EOB
 
