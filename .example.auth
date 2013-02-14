@@ -1,0 +1,4 @@
+# comments are ignored
+   # indented ones, too!
+admin:admin
+anything after the first non-comment line is discarded, too

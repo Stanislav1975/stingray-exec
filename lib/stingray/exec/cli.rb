@@ -53,30 +53,36 @@ class Stingray::Exec::Cli
   def parse_options
     OptionParser.new do |opts|
       opts.banner = BANNER
-      opts.on('-v', '--verbose', 'Yelling. (DEBUG=1)') do |v|
+      opts.on('-v', '--verbose', 'Yelling. (DEBUG=1)') do
         ENV['DEBUG'] = '1'
       end
       opts.on('-k', '--insecure', 'Allow "insecure" SSL connections ' <<
-          '(STINGRAY_SSL_VERIFY_NONE=1)') do |k|
+          '(STINGRAY_SSL_VERIFY_NONE=1)') do
         ENV['STINGRAY_SSL_VERIFY_NONE'] = '1'
       end
-      opts.on('-u', '--user-password',
+      opts.on('-u=', '--user-password=',
           'Stingray username:password (STINGRAY_AUTH=<user>:<pass>)') do |u|
         ENV['STINGRAY_AUTH'] = u
       end
-      opts.on('-C', '--credentials', 'Credentials file containing ' <<
+      opts.on('-C=', '--credentials=', 'Credentials file containing ' <<
           'username:password (STINGRAY_AUTH=<user>:<pass>)') do |c|
-        ENV['STINGRAY_AUTH'] = File.read(c).strip
+        ENV['STINGRAY_AUTH'] = read_credentials_file(c)
       end
-      opts.on('-E', '--endpoint',
+      opts.on('-E=', '--endpoint=',
           'Stingray server SOAP endpoint (STINGRAY_ENDPOINT=<uri>)') do |endpoint|
         ENV['STINGRAY_ENDPOINT'] = endpoint
       end
-      opts.on('-V', '--stingray-version', 'Stingray server version, ' <<
+      opts.on('-V=', '--stingray-version=', 'Stingray server version, ' <<
           'e.g. "9.0" or "9.1" (STINGRAY_VERSION="9.1")') do |ver|
         ENV['STINGRAY_VERSION'] = ver
       end
     end.parse!(argv)
+  end
+
+  def read_credentials_file(filename)
+    File.read(filename).split($/).reject do |l|
+      l.strip =~ /^#/ || l.strip.empty?
+    end.first
   end
 
   def prepare_script
