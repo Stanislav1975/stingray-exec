@@ -43,7 +43,7 @@ echo "--------------------------------------------------"
 echo
 echo "----------------------------------------------------------------"
 echo "---- Sadly, you'll still have to go here and click on the   ----"
-echo "---- on the 'developer mode' button:                        ----"
+echo "---- 'developer mode' button:                               ----"
 echo "---- https://$(stingray-primaryip):9090/apps/sxtm/login.cgi ----"
 echo "----------------------------------------------------------------"
 echo
