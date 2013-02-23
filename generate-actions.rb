@@ -3,7 +3,7 @@
 require 'wasabi'
 
 USAGE = <<-EOU
-Usage: #{File.basename($0)} <stingray-wsdl-dir>
+Usage: #{File.basename($0)} [-h|--help] <stingray-wsdl-dir>
 
 Generate a YAML blob containing all methods found in the WSDL files provided in
 the built-in Stingray docs.  This is done so that we can use Savon::Model to
@@ -59,7 +59,10 @@ STINGRAY_WSDL_CONFIGURATIONS = %w(
 class ActionsGenerator
   def self.main(argv)
     wsdl_root = argv.first
-    if wsdl_root.nil? || wsdl_root.empty?
+    if %w(-h --help).include?(wsdl_root)
+      $stderr.puts(USAGE)
+      return 0
+    elsif wsdl_root.nil? || wsdl_root.empty?
       $stderr.puts "ERROR: Missing required argument <stingray-wsdl-dir>"
       $stderr.puts(USAGE)
       return 1
