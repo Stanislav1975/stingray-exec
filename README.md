@@ -43,15 +43,6 @@ be passed as environmental variables.  The idea here is that it's
 sometimes easier to define an environmental variable soup instead of
 having to pass lots of flags for every invocation.
 
-## Examples
-
-There are some example `stingray-exec` scripts present in the
-`./examples` directory.  The `stingray-exec` script accepts a filename
-as positional argument, so using it in the shebang line works great.
-
-**WARNING**: some of the examples are destructive, so don't go pointing
-them at production systems or any such nonsense.
-
 ### Running the tests
 
 The test suite uses RSpec.  By default, all specs tagged with
@@ -64,6 +55,15 @@ how to do this are available in the `.local.integration.env` and
 ````` bash
 bundle exec rspec
 `````
+
+## Examples
+
+There are some example `stingray-exec` scripts present in the
+`./examples` directory.  The `stingray-exec` script accepts a filename
+as positional argument, so using it in the shebang line works great.
+
+**WARNING**: some of the examples are destructive, so don't go pointing
+them at production systems or any such nonsense.
 
 ## Contributing
 
