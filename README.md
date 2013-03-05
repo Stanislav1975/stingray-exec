@@ -17,7 +17,7 @@ TODO: yup
 Some (all?) of this may be obvious for those familiar with Ruby modern
 projects.  It'll be okay.
 
-Clone down a capy
+Clone down a copy
 ````` bash
 git clone git://github.com/modcloth/stingray-exec.git
 pushd stingray-exec
