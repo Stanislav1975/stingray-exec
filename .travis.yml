@@ -4,3 +4,8 @@ rvm:
 - '1.9.3'
 - '2.0'
 script: bundle exec rspec
+notifications:
+  email:
+    recipients:
+    - d.buch+stingray-exec@modcloth.com
+    - r.colton+stingray-exec@modcloth.com
