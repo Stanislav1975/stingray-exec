@@ -19,7 +19,7 @@ projects.  It'll be okay.
 
 Clone down a copy
 ````` bash
-git clone git://github.com/modcloth/stingray-exec.git
+git clone git://github.com/modcloth-labs/stingray-exec.git
 pushd stingray-exec
 `````
 
