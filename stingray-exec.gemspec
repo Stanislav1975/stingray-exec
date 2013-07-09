@@ -6,7 +6,7 @@ require 'stingray/exec/version'
 Gem::Specification.new do |gem|
   gem.name          = "stingray-exec"
   gem.version       = Stingray::Exec::VERSION
-  gem.authors       = ["Dan Buch"]
+  gem.authors       = ["Dan Buch", "Jake Ritorto", "Rafe Colton"]
   gem.email         = ["d.buch@modcloth.com"]
   gem.description   = %q{Stingray Traffic Manager Control API Client}
   gem.summary       = %q{Talks to Riverbed Stingray Traffic Manager over its SOAP Control API}
