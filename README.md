@@ -1,5 +1,7 @@
 # `stingray-exec`
 
+[![Build Status](https://travis-ci.org/modcloth-labs/stingray-exec.png?branch=master)](https://travis-ci.org/modcloth-labs/stingray-exec)
+
 Stingray Traffic Manager Control API Client
 
 ## Installation
